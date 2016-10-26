@@ -1,0 +1,26 @@
+body
+{
+    background:#cccc99; 
+    font-family: sans-serif;
+}
+
+h1 {
+	font-family: 'Times New Roman', serif;
+	font-size: 1.2em;
+}
+
+ol {
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+.copyright {
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+.content
+{
+    background: #eeeecc;
+    padding: 7px;
+}

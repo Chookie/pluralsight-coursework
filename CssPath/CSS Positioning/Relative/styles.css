@@ -1,0 +1,17 @@
+.container {
+	border-color: #0080FF;
+	border-style: solid;
+	width: 200px;
+	height: 200px;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+}
+
+.bluebox {
+	background-color: #000080;
+	position: absolute;
+	top: 20px;
+}

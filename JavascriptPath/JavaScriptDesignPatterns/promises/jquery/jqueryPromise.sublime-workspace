@@ -1,0 +1,695 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inde",
+				"index.js"
+			],
+			[
+				"src",
+				"script	Tag"
+			],
+			[
+				"s",
+				"source	Tag"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"new",
+				"newBalance"
+			],
+			[
+				"sor",
+				"sortedArray"
+			],
+			[
+				"ana",
+				"anagram"
+			],
+			[
+				"anagram",
+				"anagramArray"
+			],
+			[
+				"wo",
+				"wordArray"
+			],
+			[
+				"sorted",
+				"sortedAnagram"
+			],
+			[
+				"dep",
+				"depositAmount"
+			],
+			[
+				"le",
+				"letters"
+			],
+			[
+				"nu",
+				"numbers"
+			],
+			[
+				"be",
+				"beatles"
+			],
+			[
+				"compa",
+				"compareTo"
+			],
+			[
+				"pers",
+				"personList"
+			],
+			[
+				"person",
+				"Person"
+			],
+			[
+				"get",
+				"get"
+			],
+			[
+				"te",
+				"temperature"
+			],
+			[
+				"tim",
+				"Timestep"
+			],
+			[
+				"cre",
+				"credentialsFile"
+			],
+			[
+				"for",
+				"forecastApi"
+			],
+			[
+				"api",
+				"apiKey"
+			],
+			[
+				"Da",
+				"DateTimeFormat"
+			],
+			[
+				"fo",
+				"format"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "jqueryPromise.sublime-project",
+			"settings":
+			{
+				"buffer_size": 120,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "'use strict';\nrequire.config({\n	baseUrl: '.',\n	paths: { \n		jquery: './node_modules/jquery/dist/jquery'\n	}\n});\n\nrequire(['jquery', './api'], function($, api) {\n	// Create a jQuery Plugin\n	$.fn.blinky = function(args) {\n		var opts = {frequency: 1000, count: -1};\n		// Merge 2 objects into the first object.  1st arg = deep\n		args = $.extend(true,opts, args);\n\n		var i = 0,\n			that = this,\n			// create a new instance of jQuery deferred API\n			dfd = $.Deferred();\n\n		var go = function() {\n			if (that.length === 0) {\n				// Nothing selected\n				return dfd.reject();\n			}\n			if (i === args.count) {\n				// Blinked required number of times\n				return dfd.resolve();\n			}\n			// do the blinking in a recursive setTimeout pattern\n			i++;\n			// Fade out in half time and back in for other half\n			$(that).fadeOut(args.frequency / 2).fadeIn(args.frequency / 2);\n			// Recursive every frequeny interval\n			setTimeout(go, args.frequency);\n		};\n\n		go();\n		// return the jQuery deferred object\n		return dfd.promise();\n	};\n\n	$(document).ready( function() {\n		$('.load-tweets').submit( function(e) {\n			e.preventDefault();\n\n			var user = $(this).find('input').val();\n\n			// Use jQuery when function to wait for 2 different promises to complete before doing done\n			$.when(api.timeline(user), $(this).find('input').blinky({count: 2}))\n				// change argument to args instead of tweets since getting result from both promises\n				.done( function(args) {\n					var el = $('.twitter').empty();\n					var lis = [];\n					// tweets is first result since was called first\n					var tweets = args[0];\n\n					for(var i = 0, il = tweets.length; i < il; i++) {\n						lis.push($('<li><strong>@' + user + '</strong>: ' + tweets[i].title + '</li>'));\n					}\n\n					el.append(lis);\n				}).fail(function( jqxhr, textStatus, error ) {\n				    var err = textStatus + \", \" + error;\n				    console.log( \"Request Failed: \" + err );\n				}).fail( function() {\n					window.alert(\"There was a problem\");\n				});\n		});\n	});\n});",
+			"file": "main.js",
+			"file_size": 1981,
+			"file_write_time": 131168724830000000,
+			"settings":
+			{
+				"buffer_size": 1979,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/User/defaultbrowser.sublime-build",
+					""
+				],
+				[
+					"Packages/User/groovy.sublime-build",
+					""
+				],
+				[
+					"Packages/User/gulp.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/defaultbrowser.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/defaultbrowser.sublime-build",
+					""
+				],
+				[
+					"Packages/User/groovy.sublime-build",
+					""
+				],
+				[
+					"Packages/User/gulp.sublime-build",
+					""
+				],
+				[
+					"Packages/User/node.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/node.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/groovy.sublime-build",
+					""
+				],
+				[
+					"Packages/User/gulp.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/gulp.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 307.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"make s",
+				"SnippetMaker: Make Snippet"
+			],
+			[
+				"installte",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"evernote",
+				"Evernote: Send to Evernote as new note"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Sub",
+				"SublimeCodeIntel: Reset"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 350.0
+	},
+	"console":
+	{
+		"height": 173.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"open ~/.codeintel/codeintel.log",
+			"less ~/.codeintel/codeintel.log",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/promises/jquery"
+	],
+	"file_history":
+	[
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/promises/jquery/index.html",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/promises/jquery/gulpfile.js",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/promises/jquery/main.js",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/promises/jquery/api.js",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/promises/jquery/package.json",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/promises/jquery/.jshintrc",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/promises/simple/simplePromise.sublime-project",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/requireTwitter/api.js",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/requireTwitter/index.html",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/requireTwitter/main.js",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/requireTwitter/gulpfile.js",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/commonjsBrowserify/app/multiplemodules.js",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/commonjsBrowserify/dist/index-browserify.js",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/bundlers/gulpfile.js",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/bundlers/app/index.js",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/.jshintrc",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/bundlers/dist/bundle.js",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/bundlers/app/index.html",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/bundlers/package.json",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/amdRequirejs/hello.js",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/amdRequirejs/gulpfile.js",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/amdRequirejs/app/hello.js",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/amdRequirejs/package.json",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/amdRequirejs/app/index.js",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/amdRequirejs/app/index.html",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/commonjsBrowserify/app/hello.js",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/commonjsBrowserify/jsbuild.sublime-project",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/commonjsBrowserify/app/index.html",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/commonjsBrowserify/package.json",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/app/index.html",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/gulpfile.js",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/app/hello.js",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/app/index.js",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/package.json",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/dist/index.html",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/User/Terminal.sublime-settings",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/Terminal/iTerm.sh",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/Alison/Development/Javascript/gs-jsBuildTutorial/index.html",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/calcClass.js",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/chainCalc.js",
+		"/Users/Alison/Development/Javascript/JavascriptDisplay/.jshintrc",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/.jshintrc",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/chainCalc2.js",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/JavaScriptDesignPatterns/JavaScriptDesignPatterns.sublime-project",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/User/node.sublime-build",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/User/defaultbrowser.sublime-build",
+		"/Users/Alison/Development/Javascript/JavascriptDisplay/index.html",
+		"/Users/Alison/Development/Javascript/JavascriptDisplay/script.js",
+		"/Users/Alison/Development/Javascript/JavascriptDisplay/display.js",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/User/gulp.sublime-build",
+		"/Users/Alison/Development/PluralSight/sublime/emmet.css",
+		"/Users/Alison/Development/PluralSight/sublime/emmet.html",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/Emmet/Default (OSX).sublime-keymap",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/User/View In Browser.sublime-settings",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/View In Browser/View In Browser.sublime-settings",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Alison/Development/PluralSight/sublime/snippet.js",
+		"/Users/Alison/Development/PluralSight/sublime/test.sublime-project",
+		"/Users/Alison/Development/PluralSight/Reactive RxJava8/MyCode/build.gradle",
+		"/Users/Alison/Development/Javascript/react/london-react-crash-course/exercises/.exercises.json",
+		"/Users/Alison/Development/Javascript/react/london-react-crash-course/exercises/02-props/index.jsx",
+		"/Users/Alison/Development/Javascript/react/london-react-crash-course/exercises/index.html",
+		"/Users/Alison/Downloads/MonokaiAJ.tmTheme",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/Colorsublime - Themes/3024_Day.tmTheme",
+		"/Users/Alison/Development/Javascript/react/london-react-crash-course/exercises/github.css",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/Quick Start to Javascript Vol 1/hello.html",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/BasicsOfProgrammingWithJavascript/ch1_ex.js",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/Quick Start to Javascript Vol 1/scripts/main.js",
+		"/Users/Alison/Development/PluralSight/AngularJS Fundamentals/AngularJS FundamentalsHelloWorld/Index.html",
+		"/Users/Alison/Desktop/\"The Emporer is Wearing No Clothes\"",
+		"/Users/Alison/Desktop/eventbrite",
+		"/Volumes/Alison/Development/Inteviews/algosfeb2016/src/test/A_FB_ArrayContainsTotalSpecs",
+		"/Users/Alison/.bash_profile",
+		"/Users/Alison/Development/interviews/google/EngineeringPhoneInterview/GoogleDocsSession.txt",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/Java8.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/Person.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/tests/Java8Tests.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/ArraySumsToNumber.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/SimpleAnagrams.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/tests/SimpleAnagramsTests.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/WordChecker.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/tests/WordAnagramTests.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/simpleAnagrams.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/wordChecker.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/tests/wordAnagramTests.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/anagrams.java",
+		"/Users/Alison/Development/Java/Trisha Gee - Java 8 in Anger/mycode/sense/build.gradle",
+		"/Users/Alison/Development/PluralSight/Groovy2/demo/src/importGpsData.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy/7-RestClient1.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/testing/BankAccount.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/testing/BankAccountTests.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/testing/InsufficientFundsException.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/BankAccount.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/importGpsData.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/closures.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/functions.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/2_Functions.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/2-Functions.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/2-Collections.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/2-BasicSyntax.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/sample.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/Sample.groovy",
+		"/Users/Alison/Development/PluralSight/Advanced Javascript/MyCode/showme.js",
+		"/Users/Alison/Development/PluralSight/Advanced Javascript/MyCode/Page72_closureExample.html",
+		"/Users/Alison/Development/Javascript/TableTennisDraw/tableTennisRoundRobbin.html",
+		"/Users/Alison/Development/PluralSight/Advanced Javascript/slides_exercises/exercises/ex1/ex1.js",
+		"/Users/Alison/Development/interviews/java/lambdasOracle/src/com/company/CollectionsComparatorTest.java",
+		"/Users/Alison/Development/interviews/java/lambdasOracle/src/com/company/ComparatorTest.java",
+		"/Users/Alison/Development/interviews/java/lambdasOracle/src/com/company/Person.java",
+		"/Users/Alison/Development/Node/temp/helloagain.html",
+		"/Users/Alison/Development/interviews/java/lambdasOracle/src/com/company/MyRunnable.java",
+		"/Users/Alison/Development/Node/temp/removeUnbalanced.js",
+		"/Users/Alison/Development/Node/temp/RemoveUnbalanced2.java",
+		"/Users/Alison/Development/Node/temp/mvMainController.js",
+		"/Users/Alison/Development/Node/temp/app.js",
+		"/Users/Alison/Development/Node/temp/helloclient.js",
+		"/Users/Alison/Development/Node/temp/helloclient.html",
+		"/Users/Alison/Development/Node/temp/RemoveUnbalanced.java",
+		"/Users/Alison/Development/Node/temp/helloworld.js",
+		"/Users/Alison/Development/PluralSight/DockerDeepDive/web/Dockerfile",
+		"/Users/Alison/Development/bitcoin/dockbitreg/Makefile.sh",
+		"/Users/Alison/Development/bitcoin/dockbitreg/Dockerfile",
+		"/Users/Alison/Documents/Work/Resumes and Job Applications/CV Store/Modified/:Users:Alison:Development:bitcoin:dockbitreg:Dockerfile",
+		"/Users/Alison/Documents/Work/Resumes and Job Applications/CV Store/Modified/Alison Johnston CV.txt"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"fn",
+			"+right",
+			"eol\"",
+			"eol",
+			"\"eol\"",
+			"home",
+			"'",
+			"subscribers",
+			"\"index",
+			"index",
+			"multiplemod",
+			"test",
+			"jQuery =",
+			"var jQuery",
+			"div",
+			"copy",
+			"iterm",
+			"src",
+			"source",
+			"src",
+			"this",
+			"by_01",
+			"by_1",
+			"by _1",
+			"super",
+			"comman",
+			"header",
+			"		.",
+			"myName",
+			"three",
+			"from",
+			"React",
+			" =",
+			"defaultProps",
+			"= ",
+			"Book",
+			"React",
+			"cakeParty",
+			"test",
+			"are",
+			"smooth",
+			"phase",
+			"smooth",
+			"eol",
+			"ctrl+a",
+			"ctrl+A",
+			"line",
+			"end",
+			"\n    ",
+			"highl",
+			"isAnagram",
+			"$",
+			"log",
+			"nodist",
+			"and",
+			"config.vm",
+			"navbar"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"checkUsingSorting",
+			"&"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "jqueryPromise.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "json"
+							},
+							"auto_complete": true,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								665,
+								665
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "javascript"
+							},
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 113.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 151.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/gulp.sublime-build",
+	"project": "jqueryPromise.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"index.js",
+				"02-props/index.jsx"
+			],
+			[
+				"",
+				"github.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 204.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

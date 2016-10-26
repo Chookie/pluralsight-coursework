@@ -1,0 +1,18 @@
+{
+  "name": "rapid-es6-modules",
+  "version": "1.0.0",
+  "description": "PluralSight Rapid ES6 Modules",
+  "main": "base.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "browser-sync": "^2.15.0",
+    "es6-module-loader": "^0.17.11",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7",
+    "traceur": "0.0.111"
+  }
+}

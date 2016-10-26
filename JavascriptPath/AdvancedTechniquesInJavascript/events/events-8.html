@@ -1,0 +1,95 @@
+<!doctype html>
+<html language="en">
+	<head>
+		<title>Events 5</title>
+		<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+	<link rel="stylesheet" href="eventStyles.css" type="text/css">
+	</head>
+	<body>
+		<div id="workArea" class="clickable">
+			<h5 class="clickable">Work Area</h5>
+			<hr />
+			<input type="button" class="clickable" value="Click Me" />
+			<p class="clickable">
+			Click me, too!
+			</p>
+			<p class="clickable">This is some more text with an embedded 
+			   <span class="clickable">clickable</span> element.
+			</p>
+		</div>
+		<div id="messages" >
+			<h5>Messages</h5>
+			<hr />
+		</div>
+	</body>
+	<script>
+	$(function() {	
+		var showEventMessage = function(options) {	
+			options = $.extend( 
+			{	eventType: 'CLICK',
+				eventTarget: this,
+				suffix: '<br/>'
+			}, options);
+			var message = options.eventType + ': ' +
+						  (options.eventTarget.nodeName || 'unknown') +
+						  options.suffix;
+			$('#messages').append(message);
+		};
+		var internalObject = { records: [], maxCount: 5};
+		var loadRecord = function() {
+			// Simulate loading a record then firing a custom event.
+			// Normally be async but this is just demo
+			var id = internalObject.records.length;
+			if (id < internalObject.maxCount) {
+				internalObject.records.push( 
+					{
+						description: 'Record id ' + id, 
+						value: Math.floor(Math.random() * 5000)
+					}
+				);
+				setTimeout(loadRecord, Math.floor(Math.random() * 1000));
+			} else {
+				// Can trigger event on any object, not just an element
+				$(internalObject).trigger('recordsloaded');
+			}
+		};
+		
+		$('.clickable')
+			.on('click',function(event) {	
+				var $this = $(this);
+				var clickCount = ($this.data('clickcount') || 0) + 1;
+
+				$this.data('clickcount',clickCount);
+
+				showEventMessage.call(this, 
+					{ eventType: '' + clickCount + ') ' + event.type });
+
+				if (clickCount === 3) {
+					$this.trigger('click3');
+				}
+
+				if ($this.attr('type') === 'button') {
+					loadRecord();
+				}
+			})
+			.on('click3', function(event) {
+				// stop proporgation else the parent clickable elements will
+				// also get the click3 event even though they did not click 3
+				event.stopPropagation();
+				showEventMessage(this, { eventType: event.type});
+				$(this).addClass('highlight');
+			})
+			;
+ 
+		// Can listen for an event on any object not just an element
+		$(internalObject)
+			.on('recordsloaded', function(event) {
+				showEventMessage.call(this, {eventType: event.type});
+				$.each(internalObject.records, function() {
+					$('#messages').append(' -- ' + 
+						this.description + ': ' + this.value + '<br/>');
+				});
+			});
+	});
+	</script>
+</html>

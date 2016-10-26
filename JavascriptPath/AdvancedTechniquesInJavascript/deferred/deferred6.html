@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Deferred Version 1</title>
+	<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+	<link type='text/css' rel='stylesheet' href='deferredStyle.css'></link>
+</head>
+<body>
+	<input id='load' type='button' value='Load'>
+	<div id='section1'></div>
+	<div id='section2'></div>
+	<div id="section3"></div>
+	<input id="proceed" type="button" value='Proceed' disabled='true'>
+	<div id="messages"></div>
+</body>
+<script type="text/javascript">
+	$( function() {
+		var loadSection = function(options) {
+			if (typeof options !== 'object') {
+				options = {};
+			}
+			options = $.extend({
+				selector: '',
+				url: ''
+			}, options);
+			return $.get(options.url, function(result) {
+				$(options.selector).html(result);
+			},'html');
+		};
+		$('#load').click( function() {
+			$.when(
+				loadSection({selector: '#section1', url: 'contentNotExist1.html'}),
+				loadSection({selector: '#section2', url: 'contentNotExist2.html'}),
+				loadSection({selector: '#section3', url: 'content3.html'})
+			)	
+			// Always used promise (even though could use when alone)
+			// to make sure we are not modifying the preferred.
+			.promise()
+			.then( function() {				
+				$('#proceed').removeAttr('disabled');
+			})
+			.fail( function(result) {
+				$('#messages').append('Failure!<br/>')
+							 .append('Result: ' + result.statusText + ', ' + result.responseText + '<br/>');
+			});
+		});
+	});
+</script>
+</html>

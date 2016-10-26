@@ -1,0 +1,6 @@
+{
+  "customers": [
+    { "id": 1, "title": "Mr", "first": "John", "last": "Smith" },
+    { "id": 2, "title": "Ms", "first": "Jayne", "last": "Doe" }
+  ]
+}

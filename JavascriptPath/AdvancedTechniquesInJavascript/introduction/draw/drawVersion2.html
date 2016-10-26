@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Draw - Version 1</title>
+	<style>
+		#theCanvas {background-image: -moz-radial-gradient(30px 30px, #FFF, #EEF);
+	</style>
+</head>
+<body>
+	<canvas id='theCanvas' width='640', height='480'>
+		Attention! Your browser does not support the Canvas.
+	</canvas>
+</body>
+<script>
+	_KSM = {
+		draw: function(left, right) {
+			left = left ? left : 10;
+			right = right ? right : 10;
+			var canvas = document.getElementById('theCanvas');
+			if (canvas.getContext) {
+				// if context exists then supports canvas
+				var context = canvas.getContext('2d');
+				context.strokeStyle = 'black';
+				context.fillStyle = 'silver';
+				context.fillRect(left, right, 100, 100);
+				context.strokeRect(left, right, 100, 100);
+			}
+		}
+	};
+	// Legacy Code
+	_KSM.draw();
+	// Latest Code
+	_KSM.draw(530,370);
+</script>
+</html>

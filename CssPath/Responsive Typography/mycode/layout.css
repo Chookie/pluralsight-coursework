@@ -1,0 +1,57 @@
+/* This layout really depends on ordering of HTML */
+/* If use  floats andnegative margins instead then does not matter */
+/* Doing this for simplicity here */
+
+.box {
+	border-color: #0080FF;
+	border-style: solid;
+	border-width: 1px;
+}
+
+header {
+	background-color: #d1d1d1;
+	padding: 1em 4.1666667% 0 4.1666667%; 
+}
+
+h1, h2, h3 {
+	font-family: "Merriweather", serif; 
+}
+
+header h1 {
+	font-weight: 900;
+	font-style: italic;
+	margin: 0.25em 0; 
+	line-height: 1.25em;
+	font-size: 5em;
+	color: #555; 
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
+}
+
+h1 {
+	font-weight: 900;
+	font-size: 3em;
+	color: #555; 
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
+}
+
+h3 {
+	font-weight: 700;
+	color: #555; 
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5); 
+}
+
+body, nav {
+	font-family: "Fira Sans", sans-serif;
+}
+
+#content {
+	padding: 1em; 
+	margin-top: 30px;
+	margin-left: 330px;
+}
+
+#sidebar {
+	position: absolute; 
+	margin-top: 30px;
+	padding: 0 30px 0 30px;
+}

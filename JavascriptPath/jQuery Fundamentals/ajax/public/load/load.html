@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Fundamentals - Ajax - Load</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$( function() {
+			$('#myButton').click( function() {
+				$('#outputDiv').load('../helpDetails.html #subTOC');
+			});
+		});
+	</script>
+</head>
+<body>
+	<button id='myButton'>Click to Load HTML</button>
+	<div id='outputDiv'></div>
+	<a href="../index.html">Home</a>
+</body>
+</html>

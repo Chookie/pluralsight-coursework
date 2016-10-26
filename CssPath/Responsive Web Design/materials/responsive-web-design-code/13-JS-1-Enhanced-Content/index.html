@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <title>GOOGLE ANALYTICS AND THE RESIZE EVENT</title>
+<head>
+
+<body>
+  <article>
+    <h1>GOOGLE ANALYTICS AND THE RESIZE EVENT</h1>
+
+    <p>There's an ongoing debate in the responsive web design community - do users resize their browser windows or not? During our Build Responsively Workshop in Columbus, Ben mentioned that he would love to have a way to track browser resize events. It seemed simple enough, so I put together this gist as a quick proof of concept:</p>
+
+    <p>This creates a handler for the browser resize event in order to fire a Google Analytics call with the browser dimensions. This solution waits for a 1 second pause before making the call to avoid a problem where some browsers would continuously fire the resize event.</p>
+
+    <p>Drop this code into your JavaScript, check out "events" within the "content" tab of Google Analytics, and you can see for yourself how many people are resizing your site.</p>
+
+    <footer>
+      <h2>Author: Rob Tarr</h2>
+      <a href="https://twitter.com/robtarr" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @robtarr</a>
+    </footer>
+    <aside>
+      <div class="enhanced-twitter">
+      
+      </div>
+
+    </aside>
+  </article>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="js/enhanced.js"></script>
+</body>

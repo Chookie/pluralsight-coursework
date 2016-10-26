@@ -1,0 +1,18 @@
+{
+  "name": "rapid-es6-sandbox",
+  "version": "1.0.0",
+  "description": "Play project for the pluralsight Rapid ES6 Training course",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "browser-sync": "^2.16.0",
+    "es6-module-loader": "^0.17.11",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7",
+    "traceur": "0.0.111"
+  }
+}

@@ -1,0 +1,34 @@
+#section1, #section2, #section3 {
+	position: absolute;
+	top: 40px;
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+	overflow-y: auto; 
+}
+#section1 {
+	left: 10px;
+}
+#section2 {
+	left: 220px;
+}
+#section3 {
+	left: 430px;
+}
+#proceed {
+	position: absolute;
+	top: 250px;
+	width: 100px;
+	left: 530px;
+}
+#load {
+	width: 100px;
+}
+#messages {
+	position: absolute;
+	top: 280px;
+	left: 10px;
+	width: 630px;
+	height: 200px;
+	overflow-y: auto;
+}

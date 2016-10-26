@@ -1,0 +1,19 @@
+{
+  "name": "bootstrap-mycode",
+  "version": "1.0.0",
+  "description": "Pluralsight Bootstrap 3 course - my code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "Wallpaper": "git+https://github.com/FormstoneClassic/Wallpaper.git",
+    "animated-header": "git+https://github.com/codrops/AnimatedHeader.git",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.1.1",
+    "jquery.easing": "^1.4.1"
+  }
+}

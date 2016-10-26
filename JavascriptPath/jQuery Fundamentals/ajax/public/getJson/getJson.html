@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Fundamentals - Ajax - GET JSON</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$( function() {
+			$('#myButton').click( function() {
+				$.getJSON('http:localhost:3000/customers', {id:2}, function(response, status, xhr) {
+					if(status === "error") {
+						alert("Error: " + xhr.statusText);
+					} else {
+						alert("ID:" + response[0].id + " " + response[0].first + " " + response[0].last);
+					}
+				});
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<button id='myButton'>Click to Load JSON</button>
+	<div id='outputDiv'></div>
+	<a href="../index.html">Home</a>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Deferred Version 1</title>
+	<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+	<link type='text/css' rel='stylesheet' href='deferredStyle.css'></link>
+</head>
+<body>
+	<input id='load' type='button' value='Load'>
+	<div id='section1'></div>
+	<div id='section2'></div>
+	<div id="section3"></div>
+	<input id="proceed" type="button" value='Proceed' disabled='true'>
+	<div id="messages"></div>
+</body>
+<script type="text/javascript">
+	$( function() {
+		var loadSection = function(options) {
+
+			// Creating our own deferred object here
+			// so going back to load method (which does not return deferred like get does).
+			var defer = $.Deferred();
+			var $div;
+
+			if (typeof options !== 'object') {
+				// Return defer object and call reject method
+				return defer.reject({statusText:'Expecting parameter object'});
+			}
+
+			options = $.extend({
+				selector: '',
+				url: ''
+			}, options);
+
+			if (options.url === '') {
+				return defer.reject({ statusText:'Missing URL'});
+			}
+
+			$div = $(options.selector);
+			if ($div.length > 0) {
+				$div.load(options.url, function() {
+					// Return defer object and call resolve method
+					// Remember load always calls complete callback but can add error args and check
+					defer.resolve();
+				});
+			} else {
+				defer.reject({ statusText:' Error in selector'});
+			}
+
+			return defer;
+		};
+		$('#load').click( function() {
+			$.when(
+				loadSection({selector: '#section1', url: 'contentNotExist1.html'}),
+				loadSection({selector: '#section2', url: 'contentNotExist2.html'}),
+				loadSection({selector: '#section3', url: 'content3.html'})
+			)	
+			// Always used promise (even though could use when alone)
+			// to make sure we are not modifying the preferred.
+			.promise()
+			.done( function() {				
+				$('#proceed').removeAttr('disabled');
+			})
+			.fail( function(result) {
+				$('#messages').append('Failure!<br/>')
+							 .append('Result: ' + result.statusText + ', ' + result.responseText + '<br/>');
+			});
+		});
+	});
+</script>
+</html>

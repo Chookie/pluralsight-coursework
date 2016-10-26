@@ -1,0 +1,38 @@
+.box {
+	border-color: #0080FF;
+	border-style: solid;
+	border-width: 1px;
+}
+
+header {
+	background-color: #d1d1d1;
+	padding: 1em 4.1666667% 0 4.1666667%; 
+}
+
+header h1 {
+	font-family: "Merriweather", Georgia; 
+	font-weight: 900;
+	font-style: italic;
+	margin: 0.25em 0; 
+	line-height: 1.25em;
+	font-size: 5em;
+	color: #555; 
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
+}
+
+#content {
+	float: left; 
+	width: 70%; 
+	padding: 1em 4.1666667%; /* 40px / 960px = 4.1666667% */
+	margin-top: 3.6em;
+	margin-left: 31%; 
+	margin-right: -100%;
+}
+
+#sidebar {
+	width: 30%; 
+	float: left; 
+	margin-top: 3.6em;
+	margin-right: -30%;  
+	margin-left: -9.5%;
+}

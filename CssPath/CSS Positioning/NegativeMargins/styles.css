@@ -1,0 +1,13 @@
+.box {
+	/*width: 100px§;*/
+	height: 100px;
+}
+
+.bluebox {
+	background-color: #000080;
+	margin-right: -100%;
+}
+
+.greenbox {
+	background-color: #008000;
+}

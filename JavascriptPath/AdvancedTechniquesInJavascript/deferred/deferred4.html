@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Deferred Version 1</title>
+	<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+	<link type='text/css' rel='stylesheet' href='deferredStyle.css'></link>
+</head>
+<body>
+	<input id='load' type='button' value='Load'>
+	<div id='section1'></div>
+	<div id='section2'></div>
+	<div id="section3"></div>
+	<input id="proceed" type="button" value='Proceed' disabled='true'>
+	<div id="messages"></div>
+</body>
+<script type="text/javascript">
+	$( function() {
+		$('#load').click( function() {
+			$.when(
+				$.get('content1.html', function(result) {
+					$('#section1').html(result);
+				}, 'html'),
+				$.get('content2.html', function(result) {
+					$('#section2').html(result);
+				}, 'html'),
+				$.get('content3.html', function(result) {
+					$('#section3').html(result);
+				}, 'html')
+			)
+			.then( function() {				
+				$('#proceed').removeAttr('disabled');
+			});
+		});
+	});
+</script>
+</html>

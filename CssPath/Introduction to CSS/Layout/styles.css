@@ -1,0 +1,28 @@
+﻿body {
+	padding: 0;
+	margin: 0;
+}
+
+#header {
+	text-align: center;
+	height: 100;
+}
+
+#links{
+	position: absolute;
+	top: 120px;
+	left: 0px;
+	width: 100px;
+}
+
+#authorinfo {
+	position: absolute;
+	top: 120px;
+	right: 0px;
+	width: 300px;
+}
+
+#content {
+	margin-right: 310px;
+	margin-left: 110px
+}
