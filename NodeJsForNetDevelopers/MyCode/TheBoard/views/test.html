@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>@model.title></title>
+        <link href="/public/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="/public/lib/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet"/>
+        <link href="/public/css/site.css" rel="stylesheet"/>
+    </head>
+    <body>
+
+    <div class=row">
+
+        @if(model.newCatErr) {
+            <p class="text-warning">@model.newCatErr</p>
+        }
+
+        <form action="/newCategory" method="POST" class="form-inline" role="form">
+        	<input type="text" class="form-control" name="categoryName" placeholder="Category ...">
+        	<button type="submit" class="btn btn-primary">New Category</button>
+        </form>
+    </div>
+
+    </body>
+</html>

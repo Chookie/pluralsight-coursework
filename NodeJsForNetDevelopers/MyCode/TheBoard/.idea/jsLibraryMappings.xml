@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$" libraries="{TheBoard node_modules}" />
+    <file url="PROJECT" libraries="{bootstrap-DefinitelyTyped, express-DefinitelyTyped, jQuery-2.0.0, passport-DefinitelyTyped, passport-strategy-DefinitelyTyped, socket.io-DefinitelyTyped, underscore-DefinitelyTyped}" />
+  </component>
+</project>

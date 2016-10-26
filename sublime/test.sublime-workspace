@@ -1,0 +1,476 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"con",
+				"console"
+			],
+			[
+				"new",
+				"newBalance"
+			],
+			[
+				"sor",
+				"sortedArray"
+			],
+			[
+				"ana",
+				"anagram"
+			],
+			[
+				"anagram",
+				"anagramArray"
+			],
+			[
+				"wo",
+				"wordArray"
+			],
+			[
+				"sorted",
+				"sortedAnagram"
+			],
+			[
+				"dep",
+				"depositAmount"
+			],
+			[
+				"le",
+				"letters"
+			],
+			[
+				"nu",
+				"numbers"
+			],
+			[
+				"be",
+				"beatles"
+			],
+			[
+				"compa",
+				"compareTo"
+			],
+			[
+				"pers",
+				"personList"
+			],
+			[
+				"person",
+				"Person"
+			],
+			[
+				"get",
+				"get"
+			],
+			[
+				"te",
+				"temperature"
+			],
+			[
+				"tim",
+				"Timestep"
+			],
+			[
+				"cre",
+				"credentialsFile"
+			],
+			[
+				"for",
+				"forecastApi"
+			],
+			[
+				"api",
+				"apiKey"
+			],
+			[
+				"Da",
+				"DateTimeFormat"
+			],
+			[
+				"fo",
+				"format"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 277.0,
+		"last_filter": "make s",
+		"selected_items":
+		[
+			[
+				"make s",
+				"SnippetMaker: Make Snippet"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"installte",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"evernote",
+				"Evernote: Send to Evernote as new note"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Sub",
+				"SublimeCodeIntel: Reset"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 710.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"open ~/.codeintel/codeintel.log",
+			"less ~/.codeintel/codeintel.log",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Alison/Development/PluralSight/Reactive RxJava8/MyCode",
+		"/Users/Alison/Development/PluralSight/Reactive RxJava8/MyCode/.gradle",
+		"/Users/Alison/Development/PluralSight/Reactive RxJava8/MyCode/gradle"
+	],
+	"file_history":
+	[
+		"/Users/Alison/Development/PluralSight/sublime/snippet.js",
+		"/Users/Alison/Development/PluralSight/sublime/test.sublime-project",
+		"/Users/Alison/Development/PluralSight/Reactive RxJava8/MyCode/build.gradle",
+		"/Users/Alison/Development/Javascript/react/london-react-crash-course/exercises/.exercises.json",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Alison/Development/Javascript/react/london-react-crash-course/exercises/02-props/index.jsx",
+		"/Users/Alison/Development/Javascript/react/london-react-crash-course/exercises/index.html",
+		"/Users/Alison/Downloads/MonokaiAJ.tmTheme",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/Colorsublime - Themes/3024_Day.tmTheme",
+		"/Users/Alison/Development/Javascript/react/london-react-crash-course/exercises/github.css",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/Quick Start to Javascript Vol 1/hello.html",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/BasicsOfProgrammingWithJavascript/ch1_ex.js",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/Alison/Development/PluralSight/JavascriptPath/Quick Start to Javascript Vol 1/scripts/main.js",
+		"/Users/Alison/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/Alison/Development/PluralSight/AngularJS Fundamentals/AngularJS FundamentalsHelloWorld/Index.html",
+		"/Users/Alison/Desktop/\"The Emporer is Wearing No Clothes\"",
+		"/Users/Alison/Desktop/eventbrite",
+		"/Volumes/Alison/Development/Inteviews/algosfeb2016/src/test/A_FB_ArrayContainsTotalSpecs",
+		"/Users/Alison/.bash_profile",
+		"/Users/Alison/Development/interviews/google/EngineeringPhoneInterview/GoogleDocsSession.txt",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/Java8.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/Person.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/tests/Java8Tests.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/ArraySumsToNumber.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/SimpleAnagrams.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/tests/SimpleAnagramsTests.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/WordChecker.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/tests/WordAnagramTests.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/simpleAnagrams.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/wordChecker.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/tests/wordAnagramTests.java",
+		"/Users/Alison/Development/interviews/algoPractiseJan2016/src/anagrams.java",
+		"/Users/Alison/Development/Java/Trisha Gee - Java 8 in Anger/mycode/sense/build.gradle",
+		"/Users/Alison/Development/PluralSight/Groovy2/demo/src/importGpsData.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy/7-RestClient1.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/testing/BankAccount.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/testing/BankAccountTests.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/testing/InsufficientFundsException.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/BankAccount.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/importGpsData.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/closures.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/functions.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/2_Functions.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/2-Functions.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/2-Collections.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/2-BasicSyntax.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/sample.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy2/Sample.groovy",
+		"/Users/Alison/Development/PluralSight/Advanced Javascript/MyCode/showme.js",
+		"/Users/Alison/Development/PluralSight/Advanced Javascript/MyCode/Page72_closureExample.html",
+		"/Users/Alison/Development/Javascript/TableTennisDraw/tableTennisRoundRobbin.html",
+		"/Users/Alison/Development/PluralSight/Advanced Javascript/slides_exercises/exercises/ex1/ex1.js",
+		"/Users/Alison/Development/interviews/java/lambdasOracle/src/com/company/CollectionsComparatorTest.java",
+		"/Users/Alison/Development/interviews/java/lambdasOracle/src/com/company/ComparatorTest.java",
+		"/Users/Alison/Development/interviews/java/lambdasOracle/src/com/company/Person.java",
+		"/Users/Alison/Development/Node/temp/helloagain.html",
+		"/Users/Alison/Development/interviews/java/lambdasOracle/src/com/company/MyRunnable.java",
+		"/Users/Alison/Development/Node/temp/removeUnbalanced.js",
+		"/Users/Alison/Development/Node/temp/RemoveUnbalanced2.java",
+		"/Users/Alison/Development/Node/temp/mvMainController.js",
+		"/Users/Alison/Development/Node/temp/app.js",
+		"/Users/Alison/Development/Node/temp/helloclient.js",
+		"/Users/Alison/Development/Node/temp/helloclient.html",
+		"/Users/Alison/Development/Node/temp/RemoveUnbalanced.java",
+		"/Users/Alison/Development/Node/temp/helloworld.js",
+		"/Users/Alison/Development/PluralSight/DockerDeepDive/web/Dockerfile",
+		"/Users/Alison/Development/bitcoin/dockbitreg/Makefile.sh",
+		"/Users/Alison/Development/bitcoin/dockbitreg/Dockerfile",
+		"/Users/Alison/Documents/Work/Resumes and Job Applications/CV Store/Modified/:Users:Alison:Development:bitcoin:dockbitreg:Dockerfile",
+		"/Users/Alison/Documents/Work/Resumes and Job Applications/CV Store/Modified/Alison Johnston CV.txt",
+		"/Users/Alison/Development/Coursera/Algorithm1/javascript/test/resources/SmallArray.txt",
+		"/Users/Alison/Development/Coursera/Algorithm1/javascript/test/resources/1kSortedDesc.txt",
+		"/Users/Alison/Development/Coursera/Algorithm1/javascript/test/resources/1kSortedAsc.txt",
+		"/Users/Alison/Development/Coursera/Algorithm1/javascript/test/resources/IntegerArray.txt",
+		"/Users/Alison/Development/Coursera/Algorithm1/javascript/test/resources/15numbers.txt",
+		"/Volumes/Alison/Desktop/pass.txt",
+		"/Users/Alison/Desktop/How To Win Friends Notes/How to win friends notes.txt",
+		"/Users/Alison/Desktop/DerekBanas/test.enmd",
+		"/Users/Alison/Development/interviews/15-121-dictionary.txt",
+		"/Users/Alison/Desktop/DerekBanas/11-Java Hash Tables 2.java",
+		"/Users/Alison/Desktop/DerekBanas/6-Java Recursion.java",
+		"/Users/Alison/Desktop/DerekBanas/7-Java Shell Sort.java",
+		"/Users/Alison/Desktop/DerekBanas/8-Java Quick Sort.java",
+		"/Users/Alison/Desktop/DerekBanas/9-Big O Notations.java",
+		"/Users/Alison/Desktop/DerekBanas/10-Java Hash Table.java",
+		"/Users/Alison/Desktop/DerekBanas/12-Java Hash Tables 3.java",
+		"/Users/Alison/Desktop/DerekBanas/13-Java Binary Search Tree.java",
+		"/Users/Alison/Desktop/DerekBanas/14-Java Binary Search Tree 2.java",
+		"/Users/Alison/Documents/Work/Resumes and Job Applications/FacebookLinkedInReply.txt",
+		"/Users/Alison/Development/hackathon/uservices-feb/comboserver/server.js",
+		"/Users/Alison/Development/hackathon/uservices-feb/comboserver/bower.json",
+		"/Users/Alison/Development/PluralSight/AngularMeanNode/CourseCode/7-building-angularjs-nodejs-apps-mean-m7-exercise-files/original/MultiVision/package.json",
+		"/Users/Alison/Development/PluralSight/AngularMeanNode/CourseCode/7-building-angularjs-nodejs-apps-mean-m7-exercise-files/original/MultiVision/public/app/common/mvNotifier.js",
+		"/Users/Alison/Development/IdeaProjects/VertxRxJavaTutorial/gradle/MyVertxRxJava/build.gradle",
+		"/Users/Alison/Development/IdeaProjects/Vertx-Template/gradlew-idea/vertx-demo-1/gradle.properties",
+		"/Users/Alison/Development/IdeaProjects/Vertx-Template/intellij-import-gradle/vertx-demo-1/build.gradle",
+		"/Users/Alison/Development/IdeaProjects/Vertx-Template/gradlew-idea/vertx-demo-1/build.gradle",
+		"/Users/Alison/Development/IdeaProjects/VertxRxJavaTutorial/gradle/MyVertxRxJava/gradle.properties",
+		"/Users/Alison/Development/PluralSight/Angular Getting Started/MyNotes.txt",
+		"/Users/Alison/Development/PluralSight/AngularMeanNode/MyNotes.txt",
+		"/Users/Alison/Documents/Web Receipts/Sublime License.txt",
+		"/Users/Alison/Development/PluralSight/AngularJS Fundamentals/My Code/Chapter 3.6/angular-seed-0.10.x/My Notes.txt",
+		"/Users/Alison/Development/IdeaProjects/VertxRxJavaTutorial/gradle/MyVertxRxJava/src/main/groovy/com/mycompany/myproject/GroovyRestVerticle.groovy",
+		"/Users/Alison/Development/IdeaProjects/RabbitMQ/Rabbit MQ Notes",
+		"/Users/Alison/Development/PluralSight/Groovy/Credentials.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy/8-Sql1.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy/8-QueryRoutepoints.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy/_SummaryOfCourse.txt",
+		"/Users/Alison/Development/PluralSight/Groovy/ImportGpsDataWithDateParser.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy/DateParserTests6.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy/DateParser6.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy/DateTimeCategory.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy/6-ExtensionMethods2.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy/DateParserTests-6.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy/DateParser-6.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy/6-DateParserTests.groovy",
+		"/Users/Alison/Development/PluralSight/Groovy/6-DateParser.groovy",
+		"/Users/Alison/Development/groovy/6-ExtensionMethods.groovy",
+		"/Users/Alison/Development/groovy/BankAccountTests3.groovy",
+		"/Users/Alison/Development/groovy/_SummaryOfCourse.txt",
+		"/Users/Alison/Development/groovy/BankAccountTests2.groovy",
+		"/Users/Alison/Development/groovy/BankAccountTests.groovy",
+		"/Users/Alison/Development/groovy/BankAccount2.groovy",
+		"/Users/Alison/Development/groovy/BankAccount.groovy",
+		"/Users/Alison/Development/groovy/InsufficientFundsException.groovy",
+		"/Users/Alison/Development/groovy/InterestRateService.groovy",
+		"/Users/Alison/Development/groovy/BankAccountJ.Java"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"three",
+			"from",
+			"React",
+			" =",
+			"defaultProps",
+			"= ",
+			"Book",
+			"React",
+			"cakeParty",
+			"test",
+			"are",
+			"smooth",
+			"phase",
+			"smooth",
+			"eol",
+			"ctrl+a",
+			"ctrl+A",
+			"line",
+			"end",
+			"\n    ",
+			"highl",
+			"isAnagram",
+			"$",
+			"log",
+			"nodist",
+			"and",
+			"config.vm",
+			"navbar"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"checkUsingSorting",
+			"&"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 213.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "test.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"index.js",
+				"02-props/index.jsx"
+			],
+			[
+				"",
+				"github.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 226.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

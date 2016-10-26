@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/app/js/controllers/EventController.js" mnemonic="7" />
+    <bookmark url="file://$PROJECT_DIR$/app/js/services/EventData.js" line="11" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="63bce383-9f63-445a-822a-8c314c36f620" name="Default" comment="" />
+    <ignored path="Events.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Events" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="TimeoutSample.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/TimeoutSample.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="11" selection-start="191" selection-end="191" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="578">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeoutSampleController.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/js/controllers/TimeoutSampleController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="7" selection-start="128" selection-end="128" vertical-scroll-proportion="0.09100642" vertical-offset="0" max-vertical-offset="934">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/app/lib/angular/angular.js" />
+        <option value="$PROJECT_DIR$/app/lib/angular/angular.min.js" />
+        <option value="$PROJECT_DIR$/app/lib/angular/angular-cookies.js" />
+        <option value="$PROJECT_DIR$/app/lib/angular/angular-cookies.min.js" />
+        <option value="$PROJECT_DIR$/app/lib/angular/angular-loader.js" />
+        <option value="$PROJECT_DIR$/app/lib/angular/angular-loader.min.js" />
+        <option value="$PROJECT_DIR$/app/lib/angular/angular-resource.js" />
+        <option value="$PROJECT_DIR$/app/lib/angular/angular-resource.min.js" />
+        <option value="$PROJECT_DIR$/app/lib/angular/angular-sanitize.js" />
+        <option value="$PROJECT_DIR$/app/lib/angular/angular-sanitize.min.js" />
+        <option value="$PROJECT_DIR$/app/EditProfile.html" />
+        <option value="$PROJECT_DIR$/app/js/controllers/EditProfileController.js" />
+        <option value="$PROJECT_DIR$/app/js/services/GravatarUrlBuilder.js" />
+        <option value="$PROJECT_DIR$/app/js/app.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/EditEventController.js" />
+        <option value="$PROJECT_DIR$/app/NewEvent.html" />
+        <option value="$PROJECT_DIR$/app/js/services/EventData.js" />
+        <option value="$PROJECT_DIR$/app/EventDetails.html" />
+        <option value="$PROJECT_DIR$/app/js/controllers/EventController.js" />
+        <option value="$PROJECT_DIR$/scripts/web-server.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/CompileSampleController.js" />
+        <option value="$PROJECT_DIR$/app/TimeoutSample.html" />
+        <option value="$PROJECT_DIR$/app/js/controllers/TimeoutSampleController.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="960" />
+    <option name="width" value="960" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state />
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="options.lastSelected" value="editing.templates" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="SearchEverywhereHistory" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Finished/11-ExceptionHandlerService/Events" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="name" value="Dart" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <browser start="false" url="" with-js-debugger="false" />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63bce383-9f63-445a-822a-8c314c36f620" name="Default" comment="" />
+      <created>1390687220758</created>
+      <updated>1390687220758</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="960" y="0" width="960" height="1040" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.24974722" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30227518" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EventDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="47" selection-start="3717" selection-end="3717" vertical-scroll-proportion="0.0" vertical-offset="1218" max-vertical-offset="1836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/EventData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="49" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/EventController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="391" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EventDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="47" selection-start="3717" selection-end="3717" vertical-scroll-proportion="0.0" vertical-offset="1218" max-vertical-offset="1836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/EventData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="49" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/EventController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="391" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EventDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="47" selection-start="3717" selection-end="3717" vertical-scroll-proportion="0.0" vertical-offset="1218" max-vertical-offset="1836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/EventController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="59" selection-start="260" selection-end="285" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="442" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/EventData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="53" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/EventController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="39" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="391" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EventDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="35" selection-start="3963" selection-end="3963" vertical-scroll-proportion="0.0" vertical-offset="933" max-vertical-offset="1819" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EditProfile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="44" selection-start="2335" selection-end="2353" vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="1088" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/EditProfileController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="19" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="289" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/GravatarUrlBuilder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="4" selection-start="4537" selection-end="4537" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="374" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/EventData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="17" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/EventController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="39" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EventDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="35" selection-start="3963" selection-end="3963" vertical-scroll-proportion="0.0" vertical-offset="933" max-vertical-offset="1819" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EditProfile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="7" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="238" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/EventData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="17" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/EventController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="39" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="391" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EventDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="35" selection-start="3963" selection-end="3963" vertical-scroll-proportion="0.0" vertical-offset="933" max-vertical-offset="1819" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/EventData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="17" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/angular/angular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="250546" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/angular/angular.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="201" column="39" selection-start="108347" selection-end="108347" vertical-scroll-proportion="0.0" vertical-offset="2540" max-vertical-offset="3519" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/angular/angular-cookies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="201" column="27" selection-start="6826" selection-end="6826" vertical-scroll-proportion="0.9632035" vertical-offset="2527" max-vertical-offset="3519" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/angular/angular-cookies.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="47" selection-start="854" selection-end="854" vertical-scroll-proportion="0.13062568" vertical-offset="0" max-vertical-offset="911" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/angular/angular-loader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="409" column="0" selection-start="18141" selection-end="18141" vertical-scroll-proportion="0.9632035" vertical-offset="6063" max-vertical-offset="7055" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/angular/angular-loader.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="46" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.1492865" vertical-offset="0" max-vertical-offset="911" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/angular/angular-resource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="593" column="27" selection-start="27633" selection-end="27633" vertical-scroll-proportion="0.9632035" vertical-offset="9191" max-vertical-offset="10183" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/angular/angular-resource.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="19" selection-start="3278" selection-end="3278" vertical-scroll-proportion="0.22392975" vertical-offset="0" max-vertical-offset="911" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/angular/angular-sanitize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="621" column="27" selection-start="22614" selection-end="22614" vertical-scroll-proportion="0.9632035" vertical-offset="9667" max-vertical-offset="10659" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/angular/angular-sanitize.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="48" selection-start="4315" selection-end="4315" vertical-scroll-proportion="0.24259056" vertical-offset="0" max-vertical-offset="911" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/GravatarUrlBuilder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="11" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/EditProfileController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="19" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EditProfile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="44" selection-start="2335" selection-end="2353" vertical-scroll-proportion="-26.076923" vertical-offset="223" max-vertical-offset="1088" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/EditEventController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="42" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="476" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NewEvent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="34" selection-start="2724" selection-end="2724" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1258" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/EventData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="40" selection-start="382" selection-end="382" vertical-scroll-proportion="0.14766558" vertical-offset="0" max-vertical-offset="921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/EventController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EventDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="29" selection-start="1224" selection-end="1224" vertical-scroll-proportion="-6.5384617" vertical-offset="408" max-vertical-offset="1836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/web-server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="64" selection-start="5290" selection-end="5290" vertical-scroll-proportion="0.0" vertical-offset="2210" max-vertical-offset="7276" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/CompileSample.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="913" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/CompileSampleController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="59" selection-start="122" selection-end="122" vertical-scroll-proportion="0.05666667" vertical-offset="0" max-vertical-offset="900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/CacheSample.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.66132724" vertical-offset="0" max-vertical-offset="874" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/CacheSampleController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="6" selection-start="0" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="934" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="75" selection-end="75" vertical-scroll-proportion="0.054603856" vertical-offset="0" max-vertical-offset="934" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/TimeoutSample.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="11" selection-start="191" selection-end="191" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/TimeoutSampleController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="7" selection-start="128" selection-end="128" vertical-scroll-proportion="0.09100642" vertical-offset="0" max-vertical-offset="934">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

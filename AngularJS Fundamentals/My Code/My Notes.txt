@@ -1,0 +1,67 @@
+Chapter 2.
+
+Directives
+Add functionality to html. Angular parses these and takes action/replaces.
+directives can be 1 or more of these but not always all
+* Can be as a tag (element)
+* Can be an attribute of a tag
+* Can be a class
+* Comments
+
+Controllers
+When minify controllers need to make sure $scope and $http does not get minified or angular won’t find it.  Do this in controller declaration
+app.controller("MainController", ["$scope", "$http", MainController]);
+
+Event directives
+ng-click
+ng-DblClick
+ng-Mousedown
+ng-Mouseenter
+ng-Mouseleave
+ng-Mousemove
+ng-Mouseover
+ng-Mouseup
+ng-Change
+
+Other directives
+ng-app
+ng-Bind
+ng-Bind-Template: Allows you to bind to multiple elements
+ng-BindHtml
+ng-BindHtmlUnsafe
+
+Expressions
+Javascript code snippets inside the bindings.  E.g. {{ 2 * 3 }}
+Cant access maths, alerts etc but useful.
+
+Filters
+Modifying output
+1 Formatting
+2 Sorting datasets
+3 Filtering datasets
+format is {{ expression | filter }}   so expressions is piped to filter
+Built in filters
+uppercase
+lowercase
+number  (format numbers)     E.g. {{ 3.14543 | number:2 }} => 3.14
+currency (format currency)   E.g. {{ 34 | currency }} => $34.00 specifies default locale but can change this.
+date E.g. javascript date {{ 1356878588 | date:'mediumDate' }}
+json - mostly used for debugging E.g. {{ {a:3, b:'c'} | json }}
+orderby = prefix with a dash - to change order to descending, else is asc by default
+limitTo = allow to only see first x items
+filter = only show items matching the filter string. by default searches all data in the datasource.
+    can use . in ng-model name to filter only 1 field. e.g. query.level
+
+Custom Filters
+See durations sample. {{ duration | durations }} sends numeric durations into filter which outputs text
+
+Two way binding
+Use ng-model ng-model="class.property" to bind form fields to model.  model binds to other elements or controller
+
+Services
+$scope is sample of service
+Don't use $ in your serviec names as this is nomenclature for anguar services only. If you do it you may overwrite an engular one.
+Include in scripts of page
+
+
+

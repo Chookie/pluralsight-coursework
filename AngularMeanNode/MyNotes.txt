@@ -1,0 +1,124 @@
+I** MEAN Stack
+
+* Updates: https://github.com/joeeames/MEANAppsFiles
+* Create empty project in IntelliJ
+NPM
+* Start by switching to project directory and running "npm init" which creates project.json which has dependencies for npm/node
+* run "npm install --save express jade" which installed expresss and jade and updates package
+* "npm install nodemon -g" = monitor node files for changes and auto redploy
+Git
+* "git init" to create local git repo
+* In IntelliJ create ".gitignore" file (he was using windows so cannot do from command line)
+* git add -A  (add all)
+* Bower can be insallted as npm module.  -g global --save-dev to save as development dependency only
+Project structure
+ * Common way is 
+  * public = client side assets
+  * app = server side assets (using "server" in this name)
+* public nornally contains views but usng jade to render so these are on server folder
+Bower
+** npm install bower --save-dev
+* create .bowerrc file and add  to tell bower were to put dependencies
+    {
+      "directory" : "public/vendor"
+    }
+* "bower init", answer questions and created bower.json for UI dependencies
+* "bower install jquery --save"
+* "bower install toaster --save" - client side notifications
+* "bower install anguler --save"
+* "bower install anguler-resource --save"
+* "bower install anguler-route --save"
+
+IntelliJ 
+-- Don't need most of this if start project as new / node project
+-- But dont choose style for css in project settings.  Install using npm later
+   otherwise don't seem to get good intellisense
+* Option used on video : remove some tips/ preferences/javascript/general turn off
+  * Signature mismatch
+  * Unresolved javascript function
+  * Unresolved Javascript Variable
+* Other option
+  * Settings / javasript / libraries / (select or download from Typescript community stubs)
+   * angular
+   * node.js v0.10...
+   * node globals
+   * angular
+   * jquery
+   * bootstrap-DefinitelyTyped
+   * express-DefinitelyTyped
+   * stylus-DefinitelyTyped
+   * jQuery 2.0.0
+   * HTML (already ticked)
+   * HTML ECMA
+
+Node App
+* Main file is called eith app.js or server.js.  Using server.js to avoid confusion
+
+Jade
+* Layout file probably overkill for SPA but common practise so is showing how to di it here
+* Pretty print.  Can use in dev
+http://stackoverflow.com/questions/5276892/expressjs-how-to-output-pretty-html
+
+Angular
+* Normally create angular partials using html but being a but creative and using jade here
+* HTML = simple routing but angle brackets
+* JADE = more difficult routing, syntax easier.
+* Controllers
+  Adding controller to existing app
+    // This just gets a reference, not create as does not include array
+    var app = angular.module("app");
+
+ Routing
+ Angular routing determines which partial pages to show in the ng-view directive and which controller goes with it.  It will ask the server for this partial, hence the code in server.js to return requested partial, then it will render the combined html client side and run the controller client side.
+
+
+** Node for Dot Net Developers
+
+* Passport is common security module but are lots of others http://passportjs.org/.
+* Vash. If you get an error "Original message: object is not a function." then check "@html.extend('vash/layout', function(model){" so that vash/layout is the location of the layout within the views file and you dont juat have "layout"
+
+MongoDB
+* Can just copy mongodb bin to a folder and run, or use global install
+* Create data directory
+* mongod --httpinterface --rest -dbpath ./data
+* --httpinterface enables interface on localhost:28017 where 28017 = 27017 + 1000
+* --rest allows rest quering of databases in mongo
+* http://localhost:28017/local/  shows the local database which is equivalent to master database
+* mongoose is common library that adds some struture over the top of mongo.  There is controversy as to whether this is right approach.  He is using raw mongo driver in this course.
+
+Mongoose
+* Controversial since mongodb is schemaless but mongoose means having a schema.
+
+Heroku
+* in package.json add new section "engines" property used by heroku
+  "engines": {
+    "node" : "0.10.x",
+    "npm" : "2.1.*"
+  },
+* Procfile is file required by Heroku to tell it what to run on start up.  No extension.
+* Commit to git "git commit -m 'a message'"
+* starte heroku 
+  >heroku login
+create heroku repo
+  >heroku create
+add heroku as remote git repo
+  >git remote
+set any environment variables
+  >heroku config:set MONGODB_URL=mongodb://pluralsight:pluralsight05101@ds031551.mongolab.com:31551/chookie-multivision
+push to heroku
+  >git push heroku master
+only need master first time, then on can use >git push heroku
+tell heroku to allocate resources to it
+  >heroku ps:scale web=1
+open app in web browser from heroku site
+  >heroku open
+
+Troubleshooting heroku
+  >cd (project git root)
+Show logs for project associated with the git redploy
+  >heroku logs
+Restart - should not have to often but can be useful
+  >heroku restart
+
+socket.io has 2 parts, client and server so make sure to specify -client.  
+* bower install socket.io-client --save

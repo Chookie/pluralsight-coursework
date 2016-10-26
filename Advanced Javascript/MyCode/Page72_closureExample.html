@@ -1,0 +1,44 @@
+<html><head>
+<title>Show Me</title>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script><style type="text/css"></style>
+<style>#showcode{background-color:#eee;border:1px solid #000;font-weight:bold;font-size:16px;}</style>
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body>
+<pre id="showcode"><code>&lt;script&gt;
+
+for (var i=1; i&lt;=5; i++) {
+	(function(i){
+		setTimeout(function(){
+			console.log("i: " + i);
+		},i*1000);
+	})(i);
+}
+
+&lt;/script&gt;</code></pre>
+<script src="showme.js"></script><script>
+
+for (var i=1; i<=5; i++) {
+	(function(i){
+		setTimeout(function(){
+			console.log("i: " + i);
+		},i*1000);
+	})(i);
+}
+
+</script>
+
+
+</body></html>

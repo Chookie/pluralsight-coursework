@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Model" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/app/js/controllers/EventController.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/js/controllers/EventController.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

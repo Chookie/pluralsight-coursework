@@ -1,0 +1,21 @@
+* Javascript module is encapsulation of methods and variables and functions
+* The IIFE = Immediatley Invoked Function Expression - often pronounced "ify"
+* Controllers are central to angular
+* ng-include can bring in html from other files, reuse etc
+* ng-show shows if truthy
+* ng-filter : orderby etc
+* $log = angular log service log, warn, info, error
+* $location = location service to redirect
+* $anchorscroll = scroll in to view
+  $location.hash(id_of_div);
+  $anchorscroll();  // scroll to the hash location we just set
+* Customer service
+  * use to share data between controllers.  3 views on screen would get same instance of controller.
+  * Reusable logic
+  module.factory("github",github);
+Routing
+  * use url for determining which view to show
+  * All happens on the client in place
+  ng-view - tells angular where to place template files on the layout file.
+  Angular uses the client fragment part of the URL, the # sign.  Angular uses this by default. (Section 5.4 @ 09:26)
+  \

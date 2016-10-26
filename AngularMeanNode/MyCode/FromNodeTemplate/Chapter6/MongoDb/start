@@ -1,0 +1,4 @@
+# Since version 2.6: MongoDB disables the HTTP interface by default.
+# HTTP interface is on port + 1000 = 27017 + 1000 = 28107
+# localhost:28017
+mongod --httpinterface --rest -dbpath ./data

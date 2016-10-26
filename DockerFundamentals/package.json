@@ -1,0 +1,16 @@
+{
+  "name": "DockerFundamentals",
+  "version": "1.0.0",
+  "description": "Pluralsight docker fundamentals node examples",
+  "private" : true,
+  "main": "app.js",
+  "author": "Alison Johnston",
+  "license": "ISC",
+  "scripts": {
+  	"start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies" : {
+  	"express" : "4.11.1"
+  }
+}
