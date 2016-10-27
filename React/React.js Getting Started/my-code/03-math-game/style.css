@@ -1,0 +1,35 @@
+/* line 2, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
+#stars-frame .glyphicon {
+  margin: 0.3em;
+  font-size: 1.75em; }
+
+/* line 8, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
+#stars-frame,
+#answer-frame {
+  width: 40%;
+  float: left; }
+
+/* line 12, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
+#button-frame {
+  width: 20%;
+  float: left;
+  text-align: center;
+  margin-top: 50px; }
+
+/* line 19, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
+#stars-frame .well,
+#answer-frame .well {
+  height: 250px; }
+
+/* line 22, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
+#numbers-frame .number {
+  display: inline-block;
+  margin: 0.5em;
+  background-color: #bbb;
+  width: 30px;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 50%;
+  cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */
