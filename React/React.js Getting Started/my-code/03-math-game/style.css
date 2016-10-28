@@ -1,28 +1,18 @@
-/* line 2, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
-#stars-frame .glyphicon {
-  margin: 0.3em;
-  font-size: 1.75em; }
+/* line 1, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
+#stars-frame, #answer-frame {
+  padding: 0px; }
+  /* line 2, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
+  #stars-frame .glyphicon, #answer-frame .glyphicon {
+    margin: 0.3em;
+    font-size: 1.75em; }
 
-/* line 8, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
-#stars-frame,
-#answer-frame {
-  width: 40%;
-  float: left; }
-
-/* line 12, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
+/* line 9, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
 #button-frame {
-  width: 20%;
-  float: left;
   text-align: center;
-  margin-top: 50px; }
+  margin-bottom: 20px; }
 
-/* line 19, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
-#stars-frame .well,
-#answer-frame .well {
-  height: 250px; }
-
-/* line 22, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
-#numbers-frame .number {
+/* line 14, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
+#numbers-frame .number, #answer-frame .well span {
   display: inline-block;
   margin: 0.5em;
   background-color: #bbb;
@@ -31,5 +21,21 @@
   font-size: 22px;
   border-radius: 50%;
   cursor: pointer; }
+
+/* line 25, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
+body {
+  margin: 0 15px; }
+
+/* line 29, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
+#numbers-frame .selected-true {
+  background-color: #e8e8e8;
+  color: #ddd;
+  cursor: not-allowed; }
+
+/* line 35, /Users/Alison/Development/PluralSight/React/React.js Getting Started/my-code/03-math-game/style.scss */
+#numbers-frame .used-true {
+  background-color: #aaddaa;
+  color: #99bb99;
+  cursor: not-allowed; }
 
 /*# sourceMappingURL=style.css.map */
