@@ -1,0 +1,3 @@
+# /node_modules/* and /bower_components/* ignored by default
+# http://eslint.org/docs/user-guide/configuring
+dist
