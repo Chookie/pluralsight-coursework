@@ -4,6 +4,9 @@ var React = require('react');
 var AuthorApi = require('../../api/authorApi');
 
 var AuthorList = React.createClass({
+  propTypes: {
+    authors: React.PropTypes.array.isRequired
+  },
   render: function() {
     var createAuthorRow = function(author) {
       return (
@@ -15,20 +18,18 @@ var AuthorList = React.createClass({
     };
     return (
       <div>
-        <h1>Authors</h1>
-
-      <table className="table">
-        <thead>
-          <th>ID</th>
-          <th>Name</th>
-        </thead>
-        <tbody>
-          {this.props.authors.map(createAuthorRow, this)}
-        </tbody>
-      </table>
+        <table className="table">
+          <thead>
+            <th>ID</th>
+            <th>Name</th>
+          </thead>
+          <tbody>
+            {this.props.authors.map(createAuthorRow, this)}
+          </tbody>
+        </table>
       </div>
     );
   }
 });
 
-module.exports = authorsList;
+module.exports = AuthorList;
