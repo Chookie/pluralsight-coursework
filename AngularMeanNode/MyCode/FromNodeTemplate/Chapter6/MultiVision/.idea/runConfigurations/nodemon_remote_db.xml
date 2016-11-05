@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="nodemon remote db" type="NodeJSConfigurationType" factoryName="Node.js" singleton="true" path-to-node="/usr/local/bin/node" path-to-js-file="server.js" node-parameters="/usr/local/bin/nodemon" working-dir="$PROJECT_DIR$">
+    <envs>
+      <env name="DEBUG" value="MultiVision" />
+      <env name="PORT" value="3030" />
+      <env name="MONGODB_URL" value="mongodb://pluralsight:pluralsight05101@ds031551.mongolab.com:31551/chookie-multivision" />
+    </envs>
+    <browser url="http://localhost:3000/" />
+    <RunnerSettings RunnerId="Basic" />
+    <ConfigurationWrapper RunnerId="Basic" />
+    <method />
+  </configuration>
+</component>

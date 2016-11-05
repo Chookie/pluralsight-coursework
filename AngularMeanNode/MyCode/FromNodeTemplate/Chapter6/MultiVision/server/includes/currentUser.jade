@@ -1,0 +1,6 @@
+// If variable exists (!! is double bang so if exists this is true)
+if !!bootstrappedUser
+    // making global so want uinque name, bootstrappedUserNameObject should be unique enough
+    // ! = jade string interpolation http://jade-lang.com/reference/interpolation/
+    script.
+        window.bootstrappedUserObject = !{JSON.stringify(bootstrappedUser)}
