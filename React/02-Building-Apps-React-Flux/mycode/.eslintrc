@@ -1,8 +1,6 @@
 {
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    }
+  "ecmaFeatures": {
+    "jsx": true
   },
   "env": {
     "browser": true,
@@ -20,7 +18,8 @@
   },
   "globals": {
     jQuery: true,
-    $: true
+    $: true,
+    "React": true
   },
   "plugins": [
       "react"

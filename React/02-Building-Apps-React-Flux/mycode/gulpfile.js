@@ -20,12 +20,13 @@ var config = {
     mainJs: './src/main.js',
     css: [
       'node_modules/bootstrap/dist/css/bootstrap.min.css',
-      'node_modules/bootstrap/dist/css/bootstrap-theme.min.css'
+      'node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
+      'node_modules/toastr/toastr.css'
     ],
     images: './src/images/*',
-    dist: './dist',
+    dist: './dist'
   }
-}
+};
 
 // Start a local dev server
 gulp.task('connect', function() {
@@ -34,19 +35,19 @@ gulp.task('connect', function() {
     port: config.port,
     base: config.devBaseUrl,
     livereload: true,
-    middleware: function(connect, opt) {
+    middleware: function(connection, options) {
       return [
         history({})
-      ]
+      ];
     }
-  })
+  });
 });
 
 gulp.task('open', ['connect'], function() {
   gulp.src(config.paths.dist + '/' + config.paths.homeHtml)
     .pipe(open({
       uri: config.devBaseUrl + ':' + config.port + '/'
-    }))
+    }));
 });
 
 // Copy html to dist and reload the page
@@ -64,12 +65,12 @@ gulp.task('js', function() {
     .pipe(source('bundle.js'))  // Define what our bundle will be named
     .pipe(gulp.dest(config.paths.dist + '/scripts'))  // Copy it to here
     .pipe(connect.reload());  // Reload any changes in the browser
-})
+});
 
 gulp.task('css', function() {
   gulp.src(config.paths.css)
       .pipe(concat('bundle.css'))
-      .pipe(gulp.dest(config.paths.dist + '/css'))
+      .pipe(gulp.dest(config.paths.dist + '/css'));
 });
 
 gulp.task('images', function() {
