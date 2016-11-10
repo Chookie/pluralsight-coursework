@@ -3,10 +3,12 @@
 var React = require('react');
 var Router = require('react-router');
 var AuthorForm = require('./authorForm');
-var authorApi = require('../../api/authorApi');
+// var authorApi = require('../../api/authorApi');
+var AuthorActions = require('../../actions/authorActions');
+var AuthorStore = require('../../stores/authorStore');
 var toastr = require('toastr');
 
-var ManagerAuthorPage = React.createClass({
+var manageAuthorPage = React.createClass({
   mixins: [
     Router.Navigation
   ],
@@ -32,11 +34,11 @@ var ManagerAuthorPage = React.createClass({
     var authorId = this.props.params.id;  // This is from the path /author:id
     // Check we are updating, not creating
     if (authorId) {
-      this.setState({author: authorApi.getAuthorById(authorId)});
+      this.setState({author: AuthorStore.getAuthorById(authorId)});
+      // this.setState({author: authorApi.getAuthorById(authorId)});
     }
   },
   setAuthorState: function(event) {
-    console.log('setAuthorState');
     this.setState({dirty: true});
     var field = event.target.name;
     var value = event.target.value;
@@ -65,7 +67,12 @@ var ManagerAuthorPage = React.createClass({
     if (!this.authorFormIsValid()) {
       return;
     }
-    authorApi.saveAuthor(this.state.author);
+    if (this.state.author.id) {
+      AuthorActions.updateAuthor(this.state.author);
+    } else {
+      AuthorActions.createAuthor(this.state.author);
+    }
+    // authorApi.saveAuthor(this.state.author);
     // Setstate is async
 		this.setState({dirty: false}, function() {
       toastr.success('Author saved.');
@@ -83,4 +90,4 @@ var ManagerAuthorPage = React.createClass({
   }
 });
 
-module.exports = ManagerAuthorPage;
+module.exports = manageAuthorPage;

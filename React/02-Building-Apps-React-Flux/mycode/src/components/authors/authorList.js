@@ -1,18 +1,28 @@
 'use strict';
 
 var React = require('react');
-var AuthorApi = require('../../api/authorApi');
+// var AuthorApi = require('../../api/authorApi');
+var AuthorActions = require('../../actions/authorActions.js');
 var Router = require('react-router');
 var Link = Router.Link;
+var toastr = require('toastr');
 
 var AuthorList = React.createClass({
   propTypes: {
     authors: React.PropTypes.array.isRequired
   },
+  // This could be in the parent and pass via props
+  // but having here makes it a complete component.
+  deleteAuthor: function(id, event) {
+    event.preventDefault();
+    AuthorActions.deleteAuthor(id);
+    toastr.success('author Deleted');
+  },
   render: function() {
     var createAuthorRow = function(author) {
       return (
         <tr key={author.id}>
+          <td><a href='#' onClick={this.deleteAuthor.bind(this, author.id)}>Delete</a></td>
           <td><Link to='manageAuthor' params={{id: author.id}}>{author.id}</Link></td>
           <td>{author.firstName} {author.lastName}</td>
         </tr>
