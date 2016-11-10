@@ -3,6 +3,7 @@
 var Dispatcher = require('../dispatcher/appDispatcher');
 var ActionTypes = require('../constants/actionTypes');
 var AuthorApi = require('../api/authorApi');
+var CourseApi = require('../api/courseApi');
 
 var InitialiseActions = {
   initApp: function() {
@@ -10,7 +11,8 @@ var InitialiseActions = {
       actionType: ActionTypes.INITIALISE,
       initialData: {
         // This should really be async with promise or similar.
-        authors: AuthorApi.getAllAuthors()
+        authors: AuthorApi.getAllAuthors(),
+        courses: CourseApi.getAllCourses()
       }
     });
   }
