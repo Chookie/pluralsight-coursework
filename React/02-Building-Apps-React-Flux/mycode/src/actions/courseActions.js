@@ -9,7 +9,7 @@ var CouseActions = {
     var newCourse = courseApi.saveCourse(course);
 
     Dispatcher.dispatch({
-      actionType: ActionTypes.CREATE_AUTHOR,
+      actionType: ActionTypes.CREATE_COURSE,
       course: newCourse
     });
   }
