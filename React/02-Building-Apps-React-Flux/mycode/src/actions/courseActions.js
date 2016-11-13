@@ -12,6 +12,25 @@ var CouseActions = {
       actionType: ActionTypes.CREATE_COURSE,
       course: newCourse
     });
+  },
+  updateCourse: function(course) {
+    var updatedCourse = courseApi.saveCourse(course);
+
+    Dispatcher.dispatch({
+      actionType: ActionTypes.UPDATE_COURSE,
+      course: updatedCourse
+    });
+  },
+  // Here we cold have 2 actions when async. first for delete course which notifies UI
+  // that about to perform action.  Put UI in progress state.
+  // Then when it is done send a DELETED_COURSE event.
+  deleteCourse: function(id) {
+    courseApi.deleteCourse(id);
+
+    Dispatcher.dispatch({
+      actionType: ActionTypes.DELETE_COURSE,
+      id: id
+    });
   }
 };
 

@@ -50192,6 +50192,25 @@ var CouseActions = {
       actionType: ActionTypes.CREATE_COURSE,
       course: newCourse
     });
+  },
+  updateCourse: function(course) {
+    var updatedCourse = courseApi.saveCourse(course);
+
+    Dispatcher.dispatch({
+      actionType: ActionTypes.UPDATE_COURSE,
+      course: updatedCourse
+    });
+  },
+  // Here we cold have 2 actions when async. first for delete course which notifies UI
+  // that about to perform action.  Put UI in progress state.
+  // Then when it is done send a DELETED_COURSE event.
+  deleteCourse: function(id) {
+    courseApi.deleteCourse(id);
+
+    Dispatcher.dispatch({
+      actionType: ActionTypes.DELETE_COURSE,
+      id: id
+    });
   }
 };
 
@@ -50524,7 +50543,7 @@ var AuthorList = React.createClass({displayName: "AuthorList",
   deleteAuthor: function(id, event) {
     event.preventDefault();
     AuthorActions.deleteAuthor(id);
-    toastr.success('author Deleted');
+    toastr.success('Author Deleted');
   },
   render: function() {
     var createAuthorRow = function(author) {
@@ -50739,14 +50758,25 @@ var Dropdown = React.createClass({displayName: "Dropdown",
         )
       );
     });
+    var wrapperClass = 'form-group';
+    if (this.props.error && this.props.error.length > 0) {
+      // Add bootstrap line around input if error
+      wrapperClass += ' ' + 'has-error';
+    }
     return (
-      React.createElement("select", {
-        name: this.props.name, 
-        ref: this.props.name, 
-        className: "form-control", 
-        value: this.state.selected, 
-        onChange: this.props.onChange}, 
-        options
+      React.createElement("div", {className: wrapperClass}, 
+        React.createElement("label", {htmlFor: this.props.name}, this.props.label), 
+        React.createElement("div", {className: "field"}, 
+          React.createElement("select", {
+            name: this.props.name, 
+            ref: this.props.name, 
+            className: "form-control", 
+            value: this.state.selected, 
+            onChange: this.props.onChange}, 
+            options
+          ), 
+          React.createElement("div", {className: "input"}, this.props.error)
+        )
       )
     );
   }
@@ -50836,14 +50866,6 @@ var CourseForm = React.createClass({displayName: "CourseForm",
   },
 
   render: function() {
-    var authors = [
-    {
-      id: "cory-house",
-      name: "Cory House"
-    }, {
-      id: "alison-johnsto",
-      name: "Alison Johnston"
-    }];
     return (
       React.createElement("form", null, 
         React.createElement("h1", null, "Manage Course"), 
@@ -50856,8 +50878,9 @@ var CourseForm = React.createClass({displayName: "CourseForm",
         ), 
         React.createElement(Dropdown, {
           name: this.props.course.id, 
+          label: "Author", 
           className: "form-control", 
-          options: authors, 
+          options: this.props.authors, 
           keyField: "id", 
           labelField: "name", 
           value: [this.props.course.author.id, this.props.course.author.name], 
@@ -50898,11 +50921,12 @@ var Link = require('react-router').Link;
 
 var courseList = React.createClass({displayName: "courseList",
   render: function() {
+    var that = this;
     var createCourseRow = function(course) {
       return (
         React.createElement("tr", null, 
           React.createElement("td", null, React.createElement("a", {href: course.watchHref}, "Watch")), 
-          React.createElement("td", null, React.createElement("a", {href: "#"}, "Delete")), 
+          React.createElement("td", null, React.createElement("a", {href: "#", onClick: that.props.onDelete.bind(this, course.id)}, "Delete")), 
           React.createElement("td", null, React.createElement(Link, {to: "manageCourse", params: { id: course.id}}, course.title)), 
           React.createElement("td", null, course.author.name), 
           React.createElement("td", null, course.category), 
@@ -50942,6 +50966,8 @@ var Router = require('react-router');
 var Link = Router.Link;
 var CourseList = require('./courseList');
 var CourseStore = require('../../stores/courseStore');
+var CourseActions = require('../../actions/courseActions');
+var toastr = require('toastr');
 
 var Course = React.createClass({displayName: "Course",
   getInitialState: function() {
@@ -50949,12 +50975,29 @@ var Course = React.createClass({displayName: "Course",
       courses: CourseStore.getAllCourses()
     };
   },
+  componentWillMount: function() {
+    CourseStore.addChangeListener(this._onChange);
+  },
+  componentWillUnmount: function() {
+    CourseStore.removeChangeListener(this._onChange);
+  },
+  _onChange: function() {
+    this.setState({ authors: CourseStore.getAllCourses()});
+  },
+  deleteCourse: function(id, event) {
+    event.preventDefault();
+    CourseActions.deleteCourse(id);
+    toastr.success('Course Deleted');
+  },
   render: function() {
     return (
       React.createElement("div", null, 
         React.createElement("h1", null, "Courses"), 
         React.createElement(Link, {to: "addCourse", className: "btn btn-default"}, "Add Course"), 
-        React.createElement(CourseList, {courses: this.state.courses})
+        React.createElement(CourseList, {
+          courses: this.state.courses, 
+          onDelete: this.deleteCourse}
+        )
       )
     );
   }
@@ -50962,7 +51005,7 @@ var Course = React.createClass({displayName: "Course",
 
 module.exports = Course;
 
-},{"../../stores/courseStore":231,"./courseList":221,"react":202,"react-router":38}],223:[function(require,module,exports){
+},{"../../actions/courseActions":205,"../../stores/courseStore":231,"./courseList":221,"react":202,"react-router":38,"toastr":203}],223:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -50976,6 +51019,13 @@ var managerCoursePage = React.createClass({displayName: "managerCoursePage",
   mixins: [
     Router.Navigation
   ],
+  statics: {
+    willTransitionFrom: function(transition, component) {
+      if (component.state.dirty && !confirm('Leave without saving?')) {
+        transition.abort();
+      }
+    }
+  },
   getInitialState: function() {
     return {
       course: {
@@ -50989,6 +51039,7 @@ var managerCoursePage = React.createClass({displayName: "managerCoursePage",
         length: "",
         category: ""
       },
+      authors: [],
       errors: {},
       dirty: false
     };
@@ -50996,9 +51047,9 @@ var managerCoursePage = React.createClass({displayName: "managerCoursePage",
   componentWillMount: function() {
     var courseId = this.props.params.id;
     if (courseId) {
-      console.log('componentWillMount');
       this.setState({ course: CourseStore.getCourseById(courseId)});
     }
+    this.setState({ authors: CourseStore.getAuthors()});
   },
   saveCourseState: function(event) {
     this.setState({ dirty: true});
@@ -51027,7 +51078,7 @@ var managerCoursePage = React.createClass({displayName: "managerCoursePage",
     }
 
     if(this.state.course.id) {
-      // no op
+      CourseActions.updateCourse(this.state.course);
     } else {
       CourseActions.createCourse(this.state.course);
     }
@@ -51041,6 +51092,7 @@ var managerCoursePage = React.createClass({displayName: "managerCoursePage",
     return (
       React.createElement(CourseForm, {
         course: this.state.course, 
+        authors: this.state.authors, 
         onChange: this.saveCourseState, 
         onSave: this.saveCourse, 
         errors: this.state.errors}
@@ -51269,6 +51321,19 @@ var CourseStore = assign({}, EventEmitter.prototype, {
 
   getCourseById: function(id) {
     return _.find(_courses, {id: id});
+  },
+  getAuthors: function() {
+    return [
+    {
+      id: "cory-house",
+      name: "Cory House"
+    }, {
+      id: "alison-johnston",
+      name: "Alison Johnston"
+    }, {
+      id: "john-smith",
+      name: "John Smith"
+    }];
   }
 });
 

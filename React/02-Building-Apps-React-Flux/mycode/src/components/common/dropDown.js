@@ -41,15 +41,26 @@ var Dropdown = React.createClass({
         </option>
       );
     });
+    var wrapperClass = 'form-group';
+    if (this.props.error && this.props.error.length > 0) {
+      // Add bootstrap line around input if error
+      wrapperClass += ' ' + 'has-error';
+    }
     return (
-      <select
-        name={this.props.name}
-        ref={this.props.name}
-        className='form-control'
-        value={this.state.selected}
-        onChange={this.props.onChange}>
-        {options}
-      </select>
+      <div className={wrapperClass}>
+        <label htmlFor={this.props.name}>{this.props.label}</label>
+        <div className='field'>
+          <select
+            name={this.props.name}
+            ref={this.props.name}
+            className='form-control'
+            value={this.state.selected}
+            onChange={this.props.onChange}>
+            {options}
+          </select>
+          <div className='input'>{this.props.error}</div>
+        </div>
+      </div>
     );
   }
 });

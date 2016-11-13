@@ -5,11 +5,12 @@ var Link = require('react-router').Link;
 
 var courseList = React.createClass({
   render: function() {
+    var that = this;
     var createCourseRow = function(course) {
       return (
         <tr>
           <td><a href={course.watchHref}>Watch</a></td>
-          <td><a href='#'>Delete</a></td>
+          <td><a href='#' onClick={that.props.onDelete.bind(this, course.id)}>Delete</a></td>
           <td><Link to='manageCourse' params={{ id: course.id}}>{course.title}</Link></td>
           <td>{course.author.name}</td>
           <td>{course.category}</td>

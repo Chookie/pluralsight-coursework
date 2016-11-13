@@ -28,6 +28,19 @@ var CourseStore = assign({}, EventEmitter.prototype, {
 
   getCourseById: function(id) {
     return _.find(_courses, {id: id});
+  },
+  getAuthors: function() {
+    return [
+    {
+      id: "cory-house",
+      name: "Cory House"
+    }, {
+      id: "alison-johnston",
+      name: "Alison Johnston"
+    }, {
+      id: "john-smith",
+      name: "John Smith"
+    }];
   }
 });
 

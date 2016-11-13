@@ -10,14 +10,6 @@ var CourseForm = React.createClass({
   },
 
   render: function() {
-    var authors = [
-    {
-      id: "cory-house",
-      name: "Cory House"
-    }, {
-      id: "alison-johnsto",
-      name: "Alison Johnston"
-    }];
     return (
       <form>
         <h1>Manage Course</h1>
@@ -30,8 +22,9 @@ var CourseForm = React.createClass({
         />
         <Dropdown
           name={this.props.course.id}
+          label="Author"
           className='form-control'
-          options={authors}
+          options={this.props.authors}
           keyField='id'
           labelField='name'
           value={[this.props.course.author.id, this.props.course.author.name]}

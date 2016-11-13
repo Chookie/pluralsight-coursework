@@ -11,6 +11,13 @@ var managerCoursePage = React.createClass({
   mixins: [
     Router.Navigation
   ],
+  statics: {
+    willTransitionFrom: function(transition, component) {
+      if (component.state.dirty && !confirm('Leave without saving?')) {
+        transition.abort();
+      }
+    }
+  },
   getInitialState: function() {
     return {
       course: {
@@ -24,6 +31,7 @@ var managerCoursePage = React.createClass({
         length: "",
         category: ""
       },
+      authors: [],
       errors: {},
       dirty: false
     };
@@ -31,9 +39,9 @@ var managerCoursePage = React.createClass({
   componentWillMount: function() {
     var courseId = this.props.params.id;
     if (courseId) {
-      console.log('componentWillMount');
       this.setState({ course: CourseStore.getCourseById(courseId)});
     }
+    this.setState({ authors: CourseStore.getAuthors()});
   },
   saveCourseState: function(event) {
     this.setState({ dirty: true});
@@ -62,7 +70,7 @@ var managerCoursePage = React.createClass({
     }
 
     if(this.state.course.id) {
-      // no op
+      CourseActions.updateCourse(this.state.course);
     } else {
       CourseActions.createCourse(this.state.course);
     }
@@ -76,6 +84,7 @@ var managerCoursePage = React.createClass({
     return (
       <CourseForm
         course={this.state.course}
+        authors={this.state.authors}
         onChange={this.saveCourseState}
         onSave={this.saveCourse}
         errors={this.state.errors}
