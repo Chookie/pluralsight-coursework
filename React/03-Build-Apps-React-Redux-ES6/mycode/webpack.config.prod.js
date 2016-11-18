@@ -22,16 +22,17 @@ export default {
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.DefinePlugin(GLOBALS),,
-    new ExtractTextPlugin(),
+    new webpack.DefinePlugin(GLOBALS),  // Make sure React builds in prod mode
+    // in dev we are bundling the css with the javascript so get quick flash on screen
+    // because css does not load until the javascript does.
+    new ExtractTextPlugin('styles.css'),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin()
   ],
   module: {
     loaders: [
       { test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel'] },
-      { test: /(\.css)$/, loaders: ['style', 'css'] },
-      { test: /(\.css)$/, loaders: ExtractTextPlugin.extract("css?sourceMap") },
+      { test: /(\.css)$/, loader: ExtractTextPlugin.extract("css?sourceMap") },
       { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },
       { test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000' },
       { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream' },

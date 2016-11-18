@@ -34,7 +34,6 @@ export default {
       { test: /\.(jpe?g|png|gif)$/i, loader: 'file?name=[name].[ext]' },
       { test: /\.ico$/, loader: 'file?name=[name].[ext]' },
       { test: /\.json$/, loader: "json" }
-
     ]
   }
 };
