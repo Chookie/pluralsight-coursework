@@ -1,9 +1,11 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {Link} from 'react-router';
 
-class componentName extends Component {
+// Could use stateless component rather than class
+// but using class here due to limitation in Hot reload now
+// where it won't work unless class near top of hiearchy.'
+class AboutPage extends Component {
     render() {
         return (
             <div>
@@ -14,4 +16,4 @@ class componentName extends Component {
     }
 }
 
-export default componentName;
+export default AboutPage;

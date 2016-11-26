@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-class CoursePage extends Component {
+class CoursesPage extends Component {
   render() {
     return (
       <div>
@@ -12,4 +12,4 @@ class CoursePage extends Component {
   }
 }
 
-export default CoursePage;
+export default CoursesPage;
