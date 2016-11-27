@@ -4,16 +4,12 @@
     "version": "0.1.0",
     "command": "node_modules/.bin/tsc",
     "isShellCommand": true,
-    "tasks" :[ {
-        "taskName": "watch",
-        "isBuildCommand": true,
-        "args": ["--target", "ES5", 
-                "--outDir", "js",
-                "--sourceMap",
-                "--watch", 
-                "app.ts"],
-        "showOutput": "silent",
-        "isWatching": true,
-        "problemMatcher": "$tsc-watch"
-    }]
+    "args": ["--target", "ES5", 
+            "--outDir", "js",
+            "--sourceMap",
+            "--watch", 
+            "app.ts"],
+    "showOutput": "silent",
+    "isWatching": true,
+    "problemMatcher": "$tsc-watch"
 }
