@@ -1,6 +1,9 @@
 'use strict';
 
-function getAllBooks() {
+import { category } from './enums';
+import { Book } from './interfaces';
+
+function getAllBooks(): Book[] {
     let books = [
         { id: 1, title: 'Ulysses', author: 'James Joyce', available: true, category: category.fiction },
         { id: 2, title: 'A Farewell to Arms', author: 'Ernest Hemingway', available: false, category: category.fiction },
@@ -27,8 +30,6 @@ function logFirstAvailable(books = getAllBooks()) : void {
     console.log(`First available: ${firstAvailable}`);
 }
 
-enum category { biography, poetry, fiction, history, children };
-
 function getBookTitlesByCategory(categoryFilter: category = category.fiction): Array<string> {
     console.log(`Getting books in category: ${category[categoryFilter]}`);
 
@@ -44,7 +45,7 @@ function logBookTitles(titles: string[]) {
     titles
 }
 
-function getBookById(id: number) {
+function getBookById(id: number): Book {
     const allBooks = getAllBooks();
     return allBooks.filter(b => b.id === id)[0];
 }
@@ -83,43 +84,33 @@ function getTitles(bookProperty: any): string[] {
             .map(b => b.title);
 }
 
-
-//***********************************************
-
-let hermansBooks = getTitles('Herman Melville');
-hermansBooks.forEach(t => console.log(t));
-let checkedOutBooks = getTitles(false);
-checkedOutBooks.forEach(t => console.log(t));
+function printBook(book: Book) {
+    console.log(`${book.title} by ${book.author}`);
+}
 
 
+// ************************
 
+let myBook = {
+    id: 5,
+    title: 'Pride and Prejudice',
+    author: 'Jane Austen',
+    available: true,
+    category: category.fiction,
+    year: '1813',
+    copies: 3
+};
 
-// let myBooks: string[] = checkOutBooks('Alison', 1, 2, 3);
-// myBooks.forEach(t => console.log(t));
+printBook(myBook);
 
+let myBook2: Book = {
+    id: 5,
+    title: 'Pride and Prejudice',
+    author: 'Jane Austen',
+    available: true,
+    category: category.fiction,
+    markDamaged: (reason: string) => console.log(`Damaged: ${reason}`)
+}
 
-// logFirstAvailable();
-
-
-// let poetryBooks = getBookTitlesByCategory();
-// poetryBooks.forEach(b => console.log(b));
-
-
-// createCustomer('Alison', 42, 'London');
-
-
-// let x: number;
-// x = 5;
-
-// let idGenerator: (chars: string, nums: number) => string;
-// idGenerator = createCustomerId;
-
-// // Inline function
-// idGenerator = (name: string, id: number) => {return id + name};
-
-// let myID: string = idGenerator('alison', x);
-// console.log(myID);
-
-
-// const fictionBooks = getBookTitlesByCategory(category.fiction);
-// fictionBooks.forEach( (v, i, a) => console.log(`${++i} - ${v}`));
+printBook(myBook2);
+myBook2.markDamaged('missing back cover');
