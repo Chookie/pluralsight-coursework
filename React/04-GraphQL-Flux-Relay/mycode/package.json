@@ -1,0 +1,25 @@
+{
+  "name": "rgrjs",
+  "version": "1.0.0",
+  "description": "Pluralsight course to create a collection of resources about React, GraphQL and Relay",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chookie/pluralsight-coursework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chookie/pluralsight-coursework/issues"
+  },
+  "homepage": "https://github.com/chookie/pluralsight-coursework#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2"
+  }
+}
