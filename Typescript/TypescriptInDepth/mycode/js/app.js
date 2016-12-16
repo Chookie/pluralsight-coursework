@@ -1,5 +1,6 @@
 'use strict';
 var enums_1 = require('./enums');
+var classes_1 = require('./classes');
 function getAllBooks() {
     var books = [
         { id: 1, title: 'Ulysses', author: 'James Joyce', available: true, category: enums_1.category.fiction },
@@ -74,24 +75,30 @@ function printBook(book) {
     console.log(book.title + " by " + book.author);
 }
 // ************************
-var myBook = {
-    id: 5,
-    title: 'Pride and Prejudice',
-    author: 'Jane Austen',
-    available: true,
-    category: enums_1.category.fiction,
-    year: '1813',
-    copies: 3
-};
-printBook(myBook);
-var myBook2 = {
-    id: 5,
-    title: 'Pride and Prejudice',
-    author: 'Jane Austen',
-    available: true,
-    category: enums_1.category.fiction,
-    markDamaged: function (reason) { return console.log("Damaged: " + reason); }
-};
-printBook(myBook2);
-myBook2.markDamaged('missing back cover');
+var favouriteLibrarian = new classes_1.UniversityLibrarian();
+favouriteLibrarian.name = 'Sharon';
+favouriteLibrarian.assistCustomer('Lynda');
+// let myBook = {
+//     id: 5,
+//     title: 'Pride and Prejudice',
+//     author: 'Jane Austen',
+//     available: true,
+//     category: category.fiction,
+//     year: '1813',
+//     copies: 3
+// };
+// printBook(myBook);
+// let myBook2: Book = {
+//     id: 5,
+//     title: 'Pride and Prejudice',
+//     author: 'Jane Austen',
+//     available: true,
+//     category: category.fiction,
+//     markDamaged: (reason: string) => console.log(`Damaged: ${reason}`)
+// }
+// let logDamage: DamageLogger;
+// logDamage = (damage: string) => console.log(`Damage reported: ${damage}`);
+// logDamage('Coffee Stains');
+// printBook(myBook2);
+// myBook2.markDamaged('missing back cover'); 
 //# sourceMappingURL=app.js.map
