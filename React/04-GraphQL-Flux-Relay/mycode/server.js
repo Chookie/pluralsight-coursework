@@ -6,7 +6,10 @@ const port = 3001;
 const app = express();
 
 // Get request
-app.get('/', (req, res) => res.send('hello express!'));
+// app.get('/', (req, res) => res.send('hello express!'));
+
+// Static middleware
+app.use(express.static('public')); 
 
 app.listen(port, function(err) {
     if (err) {
