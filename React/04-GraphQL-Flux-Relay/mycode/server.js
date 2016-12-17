@@ -1,7 +1,7 @@
 import express from 'express';
+import projectConfig from './project.config';
 import open from 'open';
 
-const port = 3001;
 // Create variable app by executing express function.
 const app = express();
 
@@ -9,12 +9,12 @@ const app = express();
 // app.get('/', (req, res) => res.send('hello express!'));
 
 // Static middleware
-app.use(express.static('public')); 
+app.use(express.static('public'));
 
-app.listen(port, function(err) {
+app.listen(projectConfig.port, function(err) {
     if (err) {
         console.log(err);
     } else {
-        open(`http://localhost:${port}`);
+      console.log(`Server started at http://localhost:${projectConfig.port}`)
     }
 });
