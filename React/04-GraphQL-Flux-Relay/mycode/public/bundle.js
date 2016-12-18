@@ -57,13 +57,15 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _Hello = __webpack_require__(/*! ./components/Hello */ 178);
+	var _Main = __webpack_require__(/*! ./components/Main */ 179);
 	
-	var _Hello2 = _interopRequireDefault(_Hello);
+	var _Main2 = _interopRequireDefault(_Main);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	_reactDom2.default.render(_react2.default.createElement(_Hello2.default, null), document.getElementById('react'));
+	// ReactDOM.render(<Hello  />, document.getElementById('react'));
+	_reactDom2.default.render(_react2.default.createElement(_Main2.default, null), document.getElementById('react'));
+	// import Hello from './components/Hello';
 
 /***/ },
 /* 1 */
@@ -22046,10 +22048,11 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
-/* 178 */
-/*!********************************!*\
-  !*** ./js/components/Hello.js ***!
-  \********************************/
+/* 178 */,
+/* 179 */
+/*!*******************************!*\
+  !*** ./js/components/Main.js ***!
+  \*******************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22064,6 +22067,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _API = __webpack_require__(/*! ../API */ 180);
+	
+	var _API2 = _interopRequireDefault(_API);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22072,30 +22079,73 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Hello = function (_React$Component) {
-	  _inherits(Hello, _React$Component);
+	var Main = function (_React$Component) {
+	  _inherits(Main, _React$Component);
 	
-	  function Hello() {
-	    _classCallCheck(this, Hello);
+	  function Main() {
+	    _classCallCheck(this, Main);
 	
-	    return _possibleConstructorReturn(this, (Hello.__proto__ || Object.getPrototypeOf(Hello)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
 	  }
 	
-	  _createClass(Hello, [{
+	  _createClass(Main, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      API.fetchLinks();
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'h3',
+	        'div',
 	        null,
-	        'Hello React with ES6 from a component!'
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Links'
+	        ),
+	        _react2.default.createElement(
+	          'ul',
+	          null,
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Link...'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Link...'
+	          )
+	        )
 	      );
 	    }
 	  }]);
 	
-	  return Hello;
+	  return Main;
 	}(_react2.default.Component);
 	
-	exports.default = Hello;
+	exports.default = Main;
+
+/***/ },
+/* 180 */
+/*!*******************!*\
+  !*** ./js/API.js ***!
+  \*******************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var API = {
+	  fetchLinks: function fetchLinks() {
+	    console.log("1. In API");
+	  }
+	};
+	
+	exports.default = API;
 
 /***/ }
 /******/ ]);
