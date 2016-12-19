@@ -9,14 +9,24 @@ let _getAppState = () => {
 };
 
 export default class Main extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = _getAppState();
-    // Need to bind change event otherwise the this at that time will
-    // be the calling component, not this class.
-    this.onChange = this.onChange.bind(this);
+  static propTypes = {
+    limit: React.PropTypes.number
   }
+  static defaultProps = {
+    limit:3
+  }
+
+  // Now using stage-0 can move this to a property
+  state = _getAppState();
+
+  // constructor(props) {
+  //   super(props);
+
+  //   this.state = _getAppState();
+  //   // Need to bind change event otherwise the this at that time will
+  //   // be the calling component, not this class.
+  //   this.onChange = this.onChange.bind(this);
+  // }
   componentDidMount() {
     API.fetchLinks();
     // This should really be a method in the store to encapsulate as should remove
@@ -25,12 +35,17 @@ export default class Main extends React.Component {
   componentWillUnmount() {
     LinkStore.removeListener("change", this.onChange);
   }
-  onChange() {
+  // onChange() {
+  //   console.log("4. In the View");
+  //   this.setState(_getAppState());
+  // }
+  // Converting this to arrow function captuires the this so no need for bind in contsructor
+  onChange = () => {
     console.log("4. In the View");
     this.setState(_getAppState());
   }
   render() {
-    let content = this.state.links.map(link => {
+    let content = this.state.links.slice(0,this.props.limit).map(link => {
       return  <li key={link._id}>
                 <a href={link.url}>{link.title}</a>
               </li>
@@ -45,3 +60,10 @@ export default class Main extends React.Component {
     )
   }
 }
+
+// Main.propTypes = {
+//   limit: React.PropTypes.number
+// }
+// Main.defaultProps = {
+//   limit:5
+// }
