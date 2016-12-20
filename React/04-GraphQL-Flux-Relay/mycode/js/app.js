@@ -10,7 +10,7 @@ import Relay from "react-relay";
 ReactDOM.render(<Main/>, document.getElementById('react'));
 
 console.log(
-  Relay.QL`
+  Relay.QL`query myQuery
   {
     links {
       title

@@ -49,8 +49,6 @@
 
 	'use strict';
 	
-	var _templateObject = _taggedTemplateLiteral(['\n  {\n    links {\n      title\n    }\n  }'], ['\n  {\n    links {\n      title\n    }\n  }']);
-	
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -69,14 +67,28 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-	// import Hello from './components/Hello';
-	
-	
 	// ReactDOM.render(<Hello  />, document.getElementById('react'));
+	
+	// import Hello from './components/Hello';
 	_reactDom2.default.render(_react2.default.createElement(_Main2.default, null), document.getElementById('react'));
 	
-	console.log(_reactRelay2.default.QL(_templateObject));
+	console.log(function () {
+	  return {
+	    children: [{
+	      fieldName: 'title',
+	      kind: 'Field',
+	      metadata: {},
+	      type: 'String'
+	    }],
+	    fieldName: 'links',
+	    kind: 'Query',
+	    metadata: {
+	      isPlural: true
+	    },
+	    name: 'MyQuery',
+	    type: 'Link'
+	  };
+	}());
 
 /***/ },
 /* 1 */
