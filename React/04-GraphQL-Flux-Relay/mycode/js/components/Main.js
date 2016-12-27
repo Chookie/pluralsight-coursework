@@ -1,19 +1,13 @@
 'use strict';
 
 import React from 'react';
+import Relay from 'react-relay';
+import Link from './Link';
 
-export default class Main extends React.Component {
-  static propTypes = {
-    limit: React.PropTypes.number
-  }
-  static defaultProps = {
-    limit:3
-  }
+class Main extends React.Component {
   render() {
-    let content = this.state.links.slice(0,this.props.limit).map(link => {
-      return  <li key={link._id}>
-                <a href={link.url}>{link.title}</a>
-              </li>
+    let content = this.props.store.links.map(link => {
+      return  <Link key={link._id} link={link} />
     });
     return (
       <div>
@@ -25,3 +19,19 @@ export default class Main extends React.Component {
     )
   }
 }
+
+// Declare the data requirements for this component using grapql
+Main = Relay.createContainer(Main, {
+  fragments: {
+    store: () => Relay.QL`
+      fragment on Store {
+        # Fetch 5 links only
+        links {
+          _id
+          ${Link.getFragment('link')}
+        }
+      }`
+  }
+});
+
+export default Main;

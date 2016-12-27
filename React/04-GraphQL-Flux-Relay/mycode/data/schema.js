@@ -8,6 +8,12 @@ import {
   GraphQLList
 } from 'graphql';
 
+import {
+  connectionDefinitions,
+  connectionArgs,
+  connectionFromPromisedArray
+} from 'graphql-relay';
+
 let Schema = (db) => {
   let stores = {};
 
@@ -20,14 +26,23 @@ let Schema = (db) => {
     })
   });
 
+  let linkConnection = connectionDefinitions({
+    name: 'Link',
+    nodeType: linkType
+  })
+
   let storeType = new GraphQLObjectType( {
       name: 'Store',
       description: 'My Query Description',
       // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions
       fields: () => ({
-        links: {
-          type: new GraphQLList(linkType),
-          resolve: () => db.collection("links").find({}).toArray()
+        linkConnection: {
+          type: linkConnection.connectionType,
+          args: connectionArgs, // Std args like first, last etc.
+          resolve: (_, args) => connectionFromPromisedArray(
+            db.collection("links").find({}).toArray(),
+            args
+          )
         }
       })
   });
