@@ -22098,16 +22098,27 @@
 	  _inherits(Main, _React$Component);
 	
 	  function Main() {
+	    var _ref;
+	
+	    var _temp, _this, _ret;
+	
 	    _classCallCheck(this, Main);
 	
-	    return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+	
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Main.__proto__ || Object.getPrototypeOf(Main)).call.apply(_ref, [this].concat(args))), _this), _this.setLimit = function (e) {
+	      var newLimit = Number(e.target.value);
+	      _this.props.relay.setVariables({ limit: newLimit });
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 	
 	  _createClass(Main, [{
 	    key: 'render',
 	    value: function render() {
-	      var content = this.props.store.links.map(function (link) {
-	        return _react2.default.createElement(_Link2.default, { key: link._id, link: link });
+	      var content = this.props.store.linkConnection.edges.map(function (edge) {
+	        return _react2.default.createElement(_Link2.default, { key: edge.node.id, link: edge.node });
 	      });
 	      return _react2.default.createElement(
 	        'div',
@@ -22116,6 +22127,21 @@
 	          'h3',
 	          null,
 	          'Links'
+	        ),
+	        'Showing: \xA0',
+	        _react2.default.createElement(
+	          'select',
+	          { onChange: this.setLimit, defaultValue: '10' },
+	          _react2.default.createElement(
+	            'option',
+	            { value: '5' },
+	            '5'
+	          ),
+	          _react2.default.createElement(
+	            'option',
+	            { value: '10' },
+	            '10'
+	          )
 	        ),
 	        _react2.default.createElement(
 	          'ul',
@@ -22133,11 +22159,98 @@
 	
 	
 	Main = _reactRelay2.default.createContainer(Main, {
+	  initialVariables: {
+	    limit: 10
+	  },
 	  fragments: {
 	    store: function store() {
-	      return function () {
-	        throw new Error('GraphQL validation error ``Cannot query field "links" on type "Store".`` in file `/Users/a.johnston/src/pluralsight/pluralsight-coursework/React/04-GraphQL-Flux-Relay/mycode/js/components/Main.js`. Try updating your GraphQL schema if an argument/field/type was recently added.');
-	      }();
+	      return function (RQL_0) {
+	        return {
+	          children: [{
+	            calls: [{
+	              kind: 'Call',
+	              metadata: {},
+	              name: 'first',
+	              value: {
+	                kind: 'CallVariable',
+	                callVariableName: 'limit'
+	              }
+	            }],
+	            children: [{
+	              children: [{
+	                children: [].concat.apply([], [{
+	                  fieldName: 'id',
+	                  kind: 'Field',
+	                  metadata: {
+	                    isRequisite: true
+	                  },
+	                  type: 'ID'
+	                }, _reactRelay2.default.QL.__frag(RQL_0)]),
+	                fieldName: 'node',
+	                kind: 'Field',
+	                metadata: {
+	                  canHaveSubselections: true,
+	                  isRequisite: true
+	                },
+	                type: 'Link'
+	              }, {
+	                fieldName: 'cursor',
+	                kind: 'Field',
+	                metadata: {
+	                  isGenerated: true,
+	                  isRequisite: true
+	                },
+	                type: 'String'
+	              }],
+	              fieldName: 'edges',
+	              kind: 'Field',
+	              metadata: {
+	                canHaveSubselections: true,
+	                isPlural: true
+	              },
+	              type: 'LinkEdge'
+	            }, {
+	              children: [{
+	                fieldName: 'hasNextPage',
+	                kind: 'Field',
+	                metadata: {
+	                  isGenerated: true,
+	                  isRequisite: true
+	                },
+	                type: 'Boolean'
+	              }, {
+	                fieldName: 'hasPreviousPage',
+	                kind: 'Field',
+	                metadata: {
+	                  isGenerated: true,
+	                  isRequisite: true
+	                },
+	                type: 'Boolean'
+	              }],
+	              fieldName: 'pageInfo',
+	              kind: 'Field',
+	              metadata: {
+	                canHaveSubselections: true,
+	                isGenerated: true,
+	                isRequisite: true
+	              },
+	              type: 'PageInfo'
+	            }],
+	            fieldName: 'linkConnection',
+	            kind: 'Field',
+	            metadata: {
+	              canHaveSubselections: true,
+	              isConnection: true
+	            },
+	            type: 'LinkConnection'
+	          }],
+	          id: _reactRelay2.default.QL.__id(),
+	          kind: 'Fragment',
+	          metadata: {},
+	          name: 'Main_StoreRelayQL',
+	          type: 'Store'
+	        };
+	      }(_Link2.default.getFragment('link'));
 	    }
 	  }
 	});
@@ -47676,7 +47789,6 @@
 	      // Destructuring properties to link variable. props is object {links:..., relay:...}
 	      var link = this.props.link;
 	
-	      console.log(this.props);
 	      return _react2.default.createElement(
 	        'li',
 	        null,
@@ -47707,6 +47819,14 @@
 	            kind: 'Field',
 	            metadata: {},
 	            type: 'String'
+	          }, {
+	            fieldName: 'id',
+	            kind: 'Field',
+	            metadata: {
+	              isGenerated: true,
+	              isRequisite: true
+	            },
+	            type: 'ID'
 	          }],
 	          id: _reactRelay2.default.QL.__id(),
 	          kind: 'Fragment',
