@@ -25,6 +25,7 @@ app.use(express.static('public'));
 // await keyword before code returning promise and must be inside function wioth async before name
 // using anonymous function (no name) and iife
 (async () => {
+  try {
   let db = await MongoClient.connect(projectConfig.mongo);
   let schema = Schema(db);
 
@@ -51,7 +52,9 @@ app.use(express.static('public'));
     }
     console.log("JSON schema created");
   });
-
+  } catch(e) {
+    console.log(e);
+  }
 })();
 
 // // Connect to database before starting server
