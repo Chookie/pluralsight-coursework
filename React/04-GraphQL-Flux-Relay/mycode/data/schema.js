@@ -14,11 +14,36 @@ import {
   connectionDefinitions,
   connectionArgs,
   connectionFromPromisedArray,
-  mutationWithClientMutationId
+  mutationWithClientMutationId,
+  globalIdField,
+  fromGlobalId,
+  nodeDefinitions
 } from 'graphql-relay';
 
 let Schema = (db) => {
-  let stores = {};
+  // Using class so we can use instanceof to identify instances of this type
+  class Store {};
+  let store = new Store();
+
+  // When relay wants a particular store it requests a node with a uniqie id, not the store directly.
+  // This code converts from the ID to the object.
+  let nodeDefs = nodeDefinitions(
+    // Map globally defined ID's to our data objects
+    (globalId) => {
+      let {type} = fromGlobalId(globalId);
+      if (type === 'Store') {
+        return store;
+      }
+      return null;
+    },
+    // This function receives the resolved data type and relay uses this to map to it's graphQL data type.
+    (obj) => {
+      if (obj instanceof Store) {
+        return storeType;
+      }
+      return null;
+    }
+  );
 
   let linkType = new GraphQLObjectType({
     name: "Link",
@@ -29,7 +54,11 @@ let Schema = (db) => {
         resolve: (obj) => obj._id
       },
       title: { type: GraphQLString },
-      url: { type: GraphQLString }
+      url: { type: GraphQLString },
+      createdAt: {
+        type: GraphQLString,
+        resolve: (obj) => obj.createdAt ? new Date(obj.createdAt).toISOString() : null
+      }
     })
   });
 
@@ -43,16 +72,34 @@ let Schema = (db) => {
       description: 'My Query Description',
       // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions
       fields: () => ({
+        // relay requires globally unique field on each element.
+        // relay helper function.
+        id: globalIdField("Store"),
         linkConnection: {
           type: linkConnection.connectionType,
-          args: connectionArgs, // Std args like first, last etc.
-          // _ means don't care about first args so don't even five it a name
-          resolve: (_, args) => connectionFromPromisedArray(
-            db.collection("links").find({}).limit(args.first).toArray(),
-            args
-          )
+          args: {
+            ...connectionArgs, // Std args like first, last etc.
+            query: { type: GraphQLString }
+          },
+          // _ means don't care about first args so don't even give it a name
+          resolve: (_, args) => {
+            let findParams = {};
+            if (args.query) {
+              // using reg ex. i = case insensitive
+              findParams.title = new RegExp(args.query, 'i');
+            }
+            return connectionFromPromisedArray(
+              db.collection("links")
+                .find(findParams)
+                .sort({createdAt: -1})
+                .limit(args.first).toArray(),
+              args
+            )
+          }
         }
-      })
+      }),
+      // For any type which could be asked for by relay we need this
+      interfaces: [nodeDefs.nodeInterface]
   });
 
   let createLinkMutation = mutationWithClientMutationId({
@@ -62,16 +109,28 @@ let Schema = (db) => {
       url: { type: new GraphQLNonNull(GraphQLString) }
     },
     outputFields: {
-      link: {
-        type: linkType,
+      linkEdge: {
+        // Use edge type helper
+        type: linkConnection.edgeType,
         // obj will be the return from mongo insert below,
         // which is array of inserted docs
-        resolve: (obj) => obj.ops[0]
+        resolve: (obj) =>({ node: obj.ops[0], cursor: obj.insertedId })
+      },
+      // send back store also in case need to update a particular store on client (if have many)
+      store: {
+        type: storeType,
+        resolve: () => store
       }
     },
+    // {title, url} is object destructuring.
     mutateAndGetPayload: ({title, url}) => {
       // Return mongo promise which relay can handle natively
-      return db.collection('links').insertOne({title, url});
+      // Pass in a new json object.  {title,url} becomes { title: 'test link 1', url: 'test1.com' }
+      return db.collection('links').insertOne({
+        title,
+        url,
+        createdAt: Date.now()
+      });
     }
   })
 
@@ -81,9 +140,10 @@ let Schema = (db) => {
       description: 'My Query Description',
       // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions
       fields: () => ({
+        node: nodeDefs.nodeField,
         store: {
           type: storeType,
-          resolve: () => stores
+          resolve: () => store
         }
       })
     }),
