@@ -4,35 +4,31 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as courseActions from './courseActions';
-import CourseList from './CourseList';
 
-class CoursesPage extends Component {
+class ManageCoursePage extends Component {
   constructor(props, context) {
     super(props, context);
+
+    this.state = {
+      courses: { }
+    };
   }
 
   render() {
-    // Destructuring so don't have to repeat belowÇ
-    const {courses} = this.props;
-
     return (
-      <div>
-        <h1>Courses</h1>
-        <CourseList courses={courses}/>
-      </div>
+     <h1>Manage Course</h1>
     );
   }
 }
 
-CoursesPage.propTypes = {
+ManageCoursePage.propTypes = {
   courses: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired
 };
 
 function mapStateToProps(storeState, ownProps) {
   return {
-    // State property name is determined by name in root reducer.
-    courses: storeState.courses
+    courses: storeState
   };
 }
 
@@ -42,4 +38,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ManageCoursePage);
