@@ -14,6 +14,29 @@ class ManageCoursePage extends Component {
       course: Object.assign({}, props.course),
       errors: {}
     };
+
+    this.updateCourseState = this.updateCourseState.bind(this);
+    this.saveCourse = this.saveCourse.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.course.id != nextProps.course.id) {
+      // Necessary to populate form when existing course is loaded directly.
+      this.setState({course: Object.assign({}, nextProps.course)});
+    }
+  }
+
+  updateCourseState(event) {
+    const field = event.target.name;
+    let course = this.state.course;
+    course[field] = event.target.value;
+    return this.setState({course: course});
+  }
+
+  saveCourse(event) {
+    event.preventDefault();
+    this.props.actions.saveCourse(this.state.course);
+    this.context.router.push('/courses');
   }
 
   render() {
@@ -21,6 +44,8 @@ class ManageCoursePage extends Component {
       <CourseForm
         course={this.state.course}
         allAuthors={this.props.authors}
+        onChange={this.updateCourseState}
+        onSave={this.saveCourse}
         errors={this.state.errors}
       />
     );
@@ -33,15 +58,32 @@ ManageCoursePage.propTypes = {
   authors: PropTypes.array.isRequired
 };
 
+//Pull in the React Router context so router is available on this.context.router.
+// Note required to avoid linting warning when testing.
+ManageCoursePage.contextTypes = {
+  router: PropTypes.object
+};
+
+function getCourseById(courses, courseId) {
+  // filter is less efficient as it searches through the whole array.
+  const course = courses.find(course => course.id === courseId);
+  if (course) {
+    return course;
+  }
+  return null;
+}
+
 function mapStateToProps(storeState, ownProps) {
-  const course = {
-    id: "",
-    title: "",
-    watchHref: "",
-    authorId: "",
-    length: "",
-    category: ""
-  };
+  // The parth /course/:id so we know if new course or existing
+  const courseId = ownProps.params.id;
+
+  let course = { id: "",  title: "", watchHref: "", authorId: "", length: "", category: "" };
+
+  if (courseId && storeState.courses.length > 0) {
+    // We came to this page to edit an existing course
+    course = getCourseById(storeState.courses, courseId);
+  }
+
   const authorsFormattedForDropdown = storeState.authors.map( author => {
     return {
       value: author.id,
