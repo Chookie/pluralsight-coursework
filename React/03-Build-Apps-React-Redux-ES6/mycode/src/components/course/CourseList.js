@@ -5,7 +5,7 @@ import CourseListRow from './CourseListRow';
 
 const CourseList = ({courses, deleteCourse}) => {
   return (
-    <table className='table'>
+    <table className="table">
       <thead>
         <tr>
           <th>&nbsp;</th>
@@ -25,7 +25,8 @@ const CourseList = ({courses, deleteCourse}) => {
 };
 
 CourseList.propTypes = {
-  courses: PropTypes.array.isRequired
+  courses: PropTypes.array.isRequired,
+  deleteCourse: PropTypes.func
 };
 
 export default CourseList;

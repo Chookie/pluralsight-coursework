@@ -1,10 +1,10 @@
 "use strict";
 
 import React, { PropTypes } from "react";
-import TextInput from './common/TextInput';
-import SelectInput from './common/SelectInput';
+import TextInput from '../common/TextInput';
+import SelectInput from '../common/SelectInput';
 
-const name = ({course, allAuthors, onSave, onChange, loading, errors}) => {
+const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) => {
   return (
     <form>
       <h1>Manage Course</h1>
@@ -19,8 +19,11 @@ const name = ({course, allAuthors, onSave, onChange, loading, errors}) => {
       <SelectInput
         name="authorId"
         label="Author"
-        value="{courseauthorId}"
-        defaulOption="Select Author"
+        value={course.authorId}
+        defaultOption="Select Author"
+        options={allAuthors}
+        onChange={onChange}
+        error={errors.authorId}
       />
 
       <TextInput
@@ -50,13 +53,13 @@ const name = ({course, allAuthors, onSave, onChange, loading, errors}) => {
   );
 };
 
-name.propTypes = {
+CourseForm.propTypes = {
   course: PropTypes.object.isRequired,
   allAuthors: PropTypes.array,
-  onSave: PropTypes.fucn.isRequired,
+  onSave: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
-  loading: PropTypes.boold,
+  loading: PropTypes.bool,
   errors: PropTypes.object
 };
 
-export default name;
+export default CourseForm;
