@@ -1,7 +1,7 @@
 'use strict';
 
 import * as types from './courseActionTypes';
-import initialState from './initialState';
+import initialState from '../../store/initialState';
 
 export default function courseReducer(state = initialState.courses, action) {
   switch(action.type) {

@@ -1,7 +1,7 @@
 'use strict';
 
 import * as types from './authorActionTypes';
-import initialState from './initialState';
+import initialState from '../../store/initialState';
 
 export default function authorReducer(state=initialState.authors, action) {
   switch (action.type) {
