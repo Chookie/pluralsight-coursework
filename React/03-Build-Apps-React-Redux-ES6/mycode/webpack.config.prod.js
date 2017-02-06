@@ -3,6 +3,7 @@ import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const GLOBALS = {
+  // Sets react to build in production mode
   'process.env.NODE_ENV': JSON.stringify('production')
 };
 

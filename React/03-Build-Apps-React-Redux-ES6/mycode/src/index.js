@@ -1,5 +1,7 @@
 "use strict";
 
+/*eslint-disable import/default */
+
 // Could just pull in individual polyfills to save space
 import 'babel-polyfill'; // Don't really need this just here but may be elsewhere'
 import React from 'react';
